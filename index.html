@@ -4,891 +4,796 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Omlazení Dotekem – Iveta Vaníčková | Masáže Týnec nad Sázavou</title>
-<meta name="description" content="Profesionální masáže v pohodlí vašeho domova. Týnec nad Sázavou a okolí. Lávové kameny, manuální lifting obličeje, lymfatická masáž, anticelulitidní masáže a další.">
+<meta name="description" content="Profesionální masáže v pohodlí vašeho domova. Manuální lifting obličeje, lávové kameny, lymfatická masáž. Týnec nad Sázavou a okolí.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --cream:#faf7f4;--blush:#f5ede6;--rose:#d4897a;--rosedark:#b86b5a;
-  --mauve:#c4a4a0;--sage:#9aab9c;--brown:#6b4c45;--dark:#3a2c2a;
-  --gold:#c9a96e;--text:#4a3730;--light:#fdf9f7;
-  --teal:#7ab5a8;
+  --petal:#fdf5f3;
+  --blush:#f8ece9;
+  --rose:#c4857a;
+  --rosedk:#a86259;
+  --mauve:#d9aaaa;
+  --mauvelight:#eecdcd;
+  --taupe:#6e4e4c;
+  --text:#3d2624;
+  --text2:#8a6260;
+  --text3:#b89896;
+  --white:#fff;
 }
 html{scroll-behavior:smooth}
-body{font-family:'Jost',sans-serif;background:var(--light);color:var(--text);font-weight:300;overflow-x:hidden}
+body{font-family:'Jost',sans-serif;background:var(--petal);color:var(--text);font-weight:300;overflow-x:hidden}
 
-/* NAV */
-nav{position:fixed;top:0;width:100%;z-index:100;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;transition:all .4s}
-nav.scrolled{background:rgba(250,247,244,.95);backdrop-filter:blur(12px);padding:14px 40px;box-shadow:0 1px 20px rgba(107,76,69,.08)}
-.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;letter-spacing:.05em;color:var(--brown);text-decoration:none}
-.nav-links{display:flex;gap:32px;list-style:none}
-.nav-links a{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text);text-decoration:none;transition:color .3s;font-weight:400}
+/* ─── NAV ─── */
+nav{position:fixed;top:0;width:100%;z-index:200;padding:18px 52px;display:flex;align-items:center;justify-content:space-between;transition:all .45s}
+nav.scrolled{background:rgba(253,245,243,.96);backdrop-filter:blur(16px);padding:12px 52px;box-shadow:0 2px 28px rgba(196,133,122,.1);border-bottom:1px solid var(--mauvelight)}
+.nav-left{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav-logo{width:44px;height:44px;border-radius:50%;object-fit:cover;border:1.5px solid var(--mauvelight);transition:transform .3s}
+.nav-logo:hover{transform:scale(1.07)}
+.nav-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--taupe);line-height:1.15}
+.nav-name small{display:block;font-style:normal;font-family:'Jost',sans-serif;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--rose);font-weight:500}
+.nav-links{display:flex;gap:32px;list-style:none;align-items:center}
+.nav-links a{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text2);text-decoration:none;transition:color .3s;font-weight:400}
 .nav-links a:hover{color:var(--rose)}
-.nav-cta{background:var(--rose);color:#fff!important;padding:9px 22px;border-radius:30px;transition:background .3s!important}
-.nav-cta:hover{background:var(--rosedark)!important}
+.nav-cta{background:var(--rose)!important;color:#fff!important;padding:9px 22px;border-radius:30px;box-shadow:0 4px 18px rgba(196,133,122,.3);transition:all .3s!important}
+.nav-cta:hover{background:var(--rosedk)!important;transform:translateY(-1px)!important}
 
-/* HERO */
-.hero{min-height:100vh;background:linear-gradient(160deg,#fdf9f7 0%,#f9ede8 50%,#f0ddd6 100%);display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:100px 40px 60px;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:-100px;right:-100px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(212,137,122,.12) 0%,transparent 70%)}
-.hero::after{content:'';position:absolute;bottom:-50px;left:-50px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(154,171,156,.1) 0%,transparent 70%)}
-.hero-content{position:relative;z-index:1;padding-right:40px}
-.hero-tag{display:inline-flex;align-items:center;gap:8px;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rose);margin-bottom:24px}
-.hero-tag::before{content:'';width:30px;height:1px;background:var(--rose)}
-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,5vw,4.5rem);font-weight:300;line-height:1.1;color:var(--dark);margin-bottom:20px}
-h1 em{font-style:italic;color:var(--rose)}
-.hero-sub{font-size:1rem;line-height:1.8;color:#7a6560;max-width:440px;margin-bottom:36px}
-.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
-.btn-primary{background:var(--rose);color:#fff;padding:14px 32px;border-radius:40px;text-decoration:none;font-size:.85rem;letter-spacing:.1em;font-weight:400;transition:all .3s;box-shadow:0 8px 30px rgba(212,137,122,.3);display:inline-block}
-.btn-primary:hover{background:var(--rosedark);transform:translateY(-2px);box-shadow:0 12px 40px rgba(212,137,122,.4)}
-.btn-outline{border:1px solid var(--rose);color:var(--rose);padding:14px 32px;border-radius:40px;text-decoration:none;font-size:.85rem;letter-spacing:.1em;font-weight:400;transition:all .3s;display:inline-block}
-.btn-outline:hover{background:var(--rose);color:#fff}
-.hero-badges{display:flex;gap:24px;margin-top:48px;flex-wrap:wrap}
-.badge{display:flex;align-items:center;gap:10px;font-size:.78rem;color:var(--brown)}
-.badge-icon{width:36px;height:36px;border-radius:50%;background:rgba(212,137,122,.12);display:flex;align-items:center;justify-content:center;font-size:1rem}
-.hero-visual{position:relative;z-index:1;display:flex;align-items:center;justify-content:center}
-.hero-circle{width:min(420px,90vw);height:min(420px,90vw);border-radius:50%;background:linear-gradient(135deg,rgba(212,137,122,.15),rgba(196,160,160,.2));border:1px solid rgba(212,137,122,.2);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px;position:relative}
-.hero-circle::before{content:'';position:absolute;inset:-15px;border-radius:50%;border:1px dashed rgba(212,137,122,.2);animation:spin 40s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-.hero-logo-placeholder{font-size:3.5rem;margin-bottom:16px}
-.hero-logo-img{width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:16px}
-.hero-circle-name{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--brown);margin-bottom:8px}
-.hero-circle-sub{font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;color:var(--rose)}
-.float-pill{position:absolute;background:#fff;border-radius:30px;padding:10px 18px;box-shadow:0 8px 30px rgba(107,76,69,.12);font-size:.78rem;white-space:nowrap}
-.float-pill.p1{top:15%;right:-30px}
-.float-pill.p2{bottom:20%;left:-40px}
-.pill-num{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:500;color:var(--rose)}
+/* ─── HERO ─── */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:110px 64px 72px;
+  background:radial-gradient(ellipse at 20% 80%,rgba(196,133,122,.08) 0%,transparent 55%),
+             radial-gradient(ellipse at 85% 20%,rgba(217,170,170,.1) 0%,transparent 50%),var(--petal);
+  position:relative;overflow:hidden}
+/* soft ornamental corners */
+.hero::before,.hero::after{content:'✿';position:absolute;font-size:6rem;color:rgba(196,133,122,.07);pointer-events:none;font-family:'Cormorant Garamond',serif}
+.hero::before{top:80px;left:32px}
+.hero::after{bottom:48px;right:32px;transform:rotate(180deg)}
 
-/* SECTIONS */
-section{padding:90px 40px}
-.section-tag{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rose);margin-bottom:12px;display:flex;align-items:center;gap:10px}
-.section-tag::after{content:'';flex:1;max-width:40px;height:1px;background:var(--rose)}
-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:300;color:var(--dark);line-height:1.2;margin-bottom:16px}
-h2 em{font-style:italic;color:var(--rose)}
-.section-lead{font-size:.95rem;line-height:1.9;color:#7a6560;max-width:560px}
-.container{max-width:1200px;margin:0 auto}
+.hero-text{position:relative;z-index:1;padding-right:40px}
+.hero-pretitle{display:inline-flex;align-items:center;gap:9px;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--rose);font-weight:500;margin-bottom:20px;opacity:0;animation:up .8s ease .2s forwards}
+.hero-pretitle::before,.hero-pretitle::after{content:'✿';font-size:.6rem;color:var(--mauvelight)}
+.hero-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3.2rem,5.5vw,5.4rem);font-weight:300;line-height:1.06;color:var(--text);margin-bottom:24px;opacity:0;animation:up .9s ease .4s forwards}
+.hero-h1 em{font-style:italic;color:var(--rose);display:block}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--text2);margin-bottom:28px;opacity:0;animation:up .9s ease .55s forwards}
+.hero-desc{font-size:.93rem;line-height:1.95;color:var(--text2);max-width:420px;margin-bottom:38px;opacity:0;animation:up .9s ease .7s forwards}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;opacity:0;animation:up .9s ease .85s forwards}
+.btn-main{background:var(--rose);color:#fff;padding:14px 32px;border-radius:30px;text-decoration:none;font-size:.78rem;letter-spacing:.14em;font-weight:500;text-transform:uppercase;transition:all .3s;box-shadow:0 8px 26px rgba(196,133,122,.35);display:inline-block;cursor:pointer;border:none;font-family:inherit}
+.btn-main:hover{background:var(--rosedk);transform:translateY(-2px);box-shadow:0 12px 34px rgba(196,133,122,.45)}
+.btn-sec{border:1.5px solid var(--mauvelight);color:var(--rose);padding:14px 32px;border-radius:30px;text-decoration:none;font-size:.78rem;letter-spacing:.14em;font-weight:400;text-transform:uppercase;transition:all .3s;display:inline-block}
+.btn-sec:hover{border-color:var(--rose);background:rgba(196,133,122,.05)}
+.hero-stats{display:flex;gap:28px;margin-top:46px;flex-wrap:wrap;opacity:0;animation:up .9s ease 1.05s forwards}
+.stat{border-left:2px solid var(--mauvelight);padding-left:14px;display:flex;flex-direction:column;gap:2px}
+.stat-n{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color:var(--rose);line-height:1}
+.stat-l{font-size:.67rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text3)}
 
-/* FOR WHOM */
-.forwho{background:var(--blush)}
-.forwho-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-top:50px}
-.forwho-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.forwho-card{background:#fff;border-radius:20px;padding:24px;transition:transform .3s;cursor:default}
-.forwho-card:hover{transform:translateY(-4px)}
-.forwho-icon{font-size:1.8rem;margin-bottom:12px}
-.forwho-card h4{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;color:var(--dark);margin-bottom:6px}
-.forwho-card p{font-size:.82rem;color:#9a8582;line-height:1.6}
-.forwho-list{list-style:none;margin-top:24px;display:flex;flex-direction:column;gap:12px}
-.forwho-list li{display:flex;align-items:center;gap:12px;font-size:.88rem;color:var(--text)}
-.forwho-list li::before{content:'✦';color:var(--rose);font-size:.6rem;flex-shrink:0}
+/* Hero visual */
+.hero-visual{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;opacity:0;animation:up 1s ease .5s forwards}
+.logo-wrap{position:relative;width:min(400px,90%);aspect-ratio:1}
+.logo-wrap::before{content:'';position:absolute;inset:-16px;border-radius:50%;border:1px dashed var(--mauvelight);animation:spin 70s linear infinite}
+.logo-wrap::after{content:'';position:absolute;inset:-32px;border-radius:50%;border:1px solid rgba(196,133,122,.1);animation:spin 110s linear infinite reverse}
+.hero-logo-img{width:100%;height:100%;object-fit:cover;border-radius:50%;border:3px solid var(--mauvelight);box-shadow:0 0 0 10px rgba(196,133,122,.05),0 28px 80px rgba(196,133,122,.18);position:relative;z-index:1}
+.hero-tag{position:absolute;background:var(--white);border:1px solid var(--mauvelight);border-radius:30px;padding:9px 18px;font-size:.78rem;color:var(--taupe);white-space:nowrap;box-shadow:0 6px 24px rgba(196,133,122,.13);z-index:2}
+.hero-tag b{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--rose);font-weight:600;font-style:italic}
+.hero-tag.t1{top:12%;right:-20px}
+.hero-tag.t2{bottom:12%;left:-20px}
 
-/* SERVICES */
-.services{background:var(--light)}
-.services-intro{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:50px;flex-wrap:wrap;gap:20px}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.service-card{background:#fff;border-radius:24px;overflow:hidden;border:1px solid rgba(212,137,122,.1);transition:all .3s;cursor:pointer;position:relative}
-.service-card:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(107,76,69,.12);border-color:rgba(212,137,122,.3)}
-.service-card-top{height:160px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.service-card-top .emoji{font-size:3rem;position:relative;z-index:1}
-.svc-lifting .service-card-top{background:linear-gradient(135deg,#fde8e2,#f9d0c8)}
-.svc-lavove .service-card-top{background:linear-gradient(135deg,#3a2c2a,#6b4c45)}
-.svc-anti .service-card-top{background:linear-gradient(135deg,#e8f0e9,#c9dbc9)}
-.svc-sportovni .service-card-top{background:linear-gradient(135deg,#e2e8f5,#c9d4e8)}
-.svc-indic .service-card-top{background:linear-gradient(135deg,#f5ebd8,#e8d4b4)}
-.svc-darce .service-card-top{background:linear-gradient(135deg,#fde8f0,#f9c8db)}
-.svc-lymfa .service-card-top{background:linear-gradient(135deg,#dceef5,#b8d8e8)}
-.service-card-body{padding:24px}
-.svc-tag{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--rose);margin-bottom:8px}
-.service-card h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;color:var(--dark);margin-bottom:8px;line-height:1.3}
-.service-card p{font-size:.83rem;color:#9a8582;line-height:1.7;margin-bottom:16px}
-.svc-footer{display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid rgba(212,137,122,.1)}
-.svc-price{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--rose);font-weight:500}
-.svc-link{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--rose);text-decoration:none;display:flex;align-items:center;gap:6px;transition:gap .3s}
-.svc-link:hover{gap:10px}
-.svc-badge-new{position:absolute;top:12px;right:12px;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:20px}
-.svc-badge-new.oblibene{background:var(--rose);color:#fff}
-.svc-badge-new.nove{background:var(--teal);color:#fff}
+/* ─── RIBBON ─── */
+.ribbon{background:linear-gradient(90deg,var(--rosedk),var(--rose),var(--rosedk));padding:18px 0;overflow:hidden}
+.ribbon-track{display:flex;white-space:nowrap;animation:marquee 26s linear infinite}
+.ritem{font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:rgba(255,255,255,.8);padding:0 26px;flex-shrink:0;letter-spacing:.05em}
+.rsep{color:rgba(255,255,255,.35)}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-/* PRICING */
-.pricing{background:var(--blush)}
-.pricing-intro{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:50px;flex-wrap:wrap;gap:20px}
-.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.pricing-card{background:#fff;border-radius:24px;padding:32px;border:1px solid rgba(212,137,122,.1);transition:transform .3s}
-.pricing-card:hover{transform:translateY(-4px)}
-.pricing-card.featured{background:linear-gradient(160deg,var(--dark),var(--brown));color:#fff;border-color:transparent;position:relative}
-.pricing-card.featured::before{content:'Nejoblíbenější';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--dark);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;padding:5px 16px;border-radius:20px;font-weight:500}
-.pricing-card h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;margin-bottom:4px}
-.pricing-card .sub{font-size:.78rem;opacity:.6;letter-spacing:.08em;margin-bottom:24px}
-.pricing-card.featured h3,.pricing-card.featured .sub{color:#f9ede8}
-.price-rows{display:flex;flex-direction:column;gap:12px}
-.price-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(212,137,122,.08);font-size:.85rem}
-.pricing-card.featured .price-row{border-color:rgba(255,255,255,.08)}
-.price-row:last-child{border-bottom:none}
-.price-row .duration{color:#b09590;font-size:.78rem}
-.pricing-card.featured .price-row .duration{color:rgba(249,237,232,.5)}
-.price-amount{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--rose);font-weight:500}
-.pricing-card.featured .price-amount{color:var(--gold)}
-.pricing-note{margin-top:20px;padding:14px;border-radius:12px;background:rgba(212,137,122,.08);font-size:.78rem;color:var(--brown);line-height:1.6}
-.pricing-card.featured .pricing-note{background:rgba(255,255,255,.08);color:rgba(249,237,232,.7)}
-.pricing-surcharge{margin-top:40px;text-align:center;padding:24px;border-radius:20px;background:#fff;border:1px dashed rgba(212,137,122,.3);font-size:.85rem;color:var(--text)}
+/* ─── LIFTING FEATURE ─── */
+.lifting{background:var(--white);padding:96px 64px;position:relative;overflow:hidden}
+.lifting::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--mauvelight),var(--rose),var(--mauvelight),transparent)}
+.lifting-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.lbadge{display:inline-flex;align-items:center;gap:8px;background:var(--blush);color:var(--rosedk);font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;padding:7px 18px;border-radius:30px;font-weight:500;border:1px solid var(--mauvelight);margin-bottom:18px}
+.section-tag{font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:var(--rose);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.section-tag::before{content:'✿';font-size:.6rem}
+.section-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.3rem,4vw,3.6rem);font-weight:400;line-height:1.1;color:var(--text);margin-bottom:16px}
+.section-h2 em{font-style:italic;color:var(--rose)}
+.section-p{font-size:.93rem;line-height:1.95;color:var(--text2);max-width:480px;margin-bottom:26px}
+.lifting-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:32px}
+.lifting-list li{display:flex;align-items:flex-start;gap:11px;font-size:.88rem;color:var(--text2);line-height:1.6}
+.lifting-list li::before{content:'✿';color:var(--rose);font-size:.58rem;flex-shrink:0;margin-top:4px}
+.price-chip{display:inline-flex;align-items:baseline;gap:7px;background:var(--blush);border:1px solid var(--mauvelight);border-radius:30px;padding:10px 22px;margin-bottom:28px}
+.price-from{font-size:.74rem;color:var(--text3);letter-spacing:.08em}
+.price-amt{font-family:'Cormorant Garamond',serif;font-size:1.85rem;font-weight:600;color:var(--rosedk)}
+.lifting-visual-wrap{position:relative;display:flex;align-items:center;justify-content:center}
+.lv-blob{
+  width:320px;height:320px;
+  background:linear-gradient(135deg,var(--blush),var(--mauvelight));
+  border-radius:62% 38% 55% 45% / 48% 54% 46% 52%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:6.5rem;
+  box-shadow:0 24px 80px rgba(196,133,122,.2);
+  animation:blob 9s ease-in-out infinite;
+}
+@keyframes blob{0%,100%{border-radius:62% 38% 55% 45%/48% 54% 46% 52%}33%{border-radius:44% 56% 42% 58%/56% 44% 56% 44%}66%{border-radius:56% 44% 60% 40%/40% 62% 38% 60%}}
+.lv-tag{position:absolute;background:var(--white);border:1px solid var(--mauvelight);border-radius:12px;padding:13px 16px;box-shadow:0 8px 28px rgba(196,133,122,.13)}
+.lv-tag.lv1{top:0;right:-8px}
+.lv-tag.lv2{bottom:12px;left:-8px}
+.lvt-l{font-size:.64rem;color:var(--text3);letter-spacing:.08em;margin-bottom:3px}
+.lvt-v{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--rose);font-weight:600}
 
-/* HOW IT WORKS */
-.howitworks{background:var(--light)}
-.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:50px}
-.step{text-align:center;padding:32px 20px;background:#fff;border-radius:20px;border:1px solid rgba(212,137,122,.1);position:relative}
-.step::after{content:'→';position:absolute;right:-14px;top:50%;transform:translateY(-50%);color:var(--mauve);font-size:1.2rem;z-index:1}
-.step:last-child::after{display:none}
-.step-num{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--rose),var(--mauve));color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:'Cormorant Garamond',serif;font-size:1.1rem}
-.step h4{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;color:var(--dark);margin-bottom:8px}
-.step p{font-size:.82rem;color:#9a8582;line-height:1.6}
+/* ─── PRO KOHO ─── */
+.forwho{background:var(--blush);padding:90px 64px}
+.forwho-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:center}
+.fw-list{list-style:none;display:flex;flex-direction:column;gap:15px;margin-top:24px}
+.fw-list li{display:flex;gap:13px;align-items:flex-start;font-size:.89rem;color:var(--text2);line-height:1.65}
+.fw-ico{width:33px;height:33px;border-radius:50%;background:rgba(255,255,255,.7);border:1px solid var(--mauvelight);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}
+.fw-cards{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.fw-card{background:var(--white);border-radius:16px;padding:24px 20px;border:1px solid var(--mauvelight);border-bottom:3px solid transparent;transition:all .3s}
+.fw-card:hover{border-bottom-color:var(--rose);transform:translateY(-3px);box-shadow:0 12px 36px rgba(196,133,122,.1)}
+.fw-card-ico{font-size:1.5rem;margin-bottom:9px}
+.fw-card h4{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--text);margin-bottom:5px}
+.fw-card p{font-size:.79rem;color:var(--text3);line-height:1.6}
 
-/* TESTIMONIALS */
-.testimonials{background:var(--blush)}
-.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:50px}
-.testimonial{background:#fff;border-radius:20px;padding:28px;border:1px solid rgba(212,137,122,.1)}
-.stars{color:var(--gold);font-size:.9rem;margin-bottom:14px;letter-spacing:2px}
-.testimonial p{font-size:.88rem;line-height:1.8;color:var(--text);font-style:italic;margin-bottom:20px}
-.testimonial-author{font-size:.78rem;color:var(--rose);letter-spacing:.08em}
+/* ─── SERVICES ─── */
+.services{padding:90px 64px;background:var(--petal)}
+.services-head{text-align:center;max-width:540px;margin:0 auto 52px}
+.services-head .section-tag{justify-content:center}
+.sgrid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.scard{background:var(--white);border-radius:20px;overflow:hidden;border:1px solid rgba(196,133,122,.12);transition:all .35s;cursor:pointer}
+.scard:hover{transform:translateY(-6px);box-shadow:0 22px 60px rgba(196,133,122,.15);border-color:var(--mauvelight)}
+.scard-top{height:130px;display:flex;align-items:center;justify-content:center;font-size:2.6rem;position:relative;overflow:hidden}
+.scard-top::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 65% 25%,rgba(255,255,255,.22),transparent 60%)}
+.ct1{background:linear-gradient(135deg,#fdeaea,#f5cece)}
+.ct2{background:linear-gradient(135deg,#ede5e0,#d4c0b8)}
+.ct3{background:linear-gradient(135deg,#dceef5,#b8d8e8)}
+.ct4{background:linear-gradient(135deg,#eaf0ea,#c4d8c4)}
+.ct5{background:linear-gradient(135deg,#e8eaf5,#c8cce8)}
+.ct6{background:linear-gradient(135deg,#f5f0e2,#e8d8b0)}
+.ct7{background:linear-gradient(135deg,#fce8f0,#f4c0d4)}
+.sbadge{position:absolute;top:10px;right:10px;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:20px;font-weight:600;z-index:1}
+.sb-top{background:var(--rose);color:#fff}
+.sb-new{background:#6aafc8;color:#fff}
+.scard-body{padding:20px 20px 22px}
+.scard-tag{font-size:.61rem;letter-spacing:.18em;text-transform:uppercase;color:var(--rose);margin-bottom:6px;display:flex;align-items:center;gap:5px}
+.scard-tag::before{content:'✿';font-size:.52rem}
+.scard h3{font-family:'Cormorant Garamond',serif;font-size:1.12rem;font-weight:600;color:var(--text);margin-bottom:7px;line-height:1.25}
+.scard p{font-size:.8rem;color:var(--text3);line-height:1.75;margin-bottom:13px}
+.scard-foot{display:flex;justify-content:space-between;align-items:center;padding-top:11px;border-top:1px solid rgba(196,133,122,.1)}
+.scard-price{font-family:'Cormorant Garamond',serif;font-size:1.12rem;color:var(--rose);font-weight:600}
+.scard-more{font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mauve);transition:color .3s,letter-spacing .3s}
+.scard:hover .scard-more{color:var(--rose);letter-spacing:.18em}
 
-/* CONTACT */
-.contact{background:linear-gradient(160deg,#3a2c2a,#6b4c45);color:#f9ede8}
-.contact h2{color:#f9ede8}
-.contact .section-tag{color:var(--gold)}
-.contact .section-tag::after{background:var(--gold)}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:50px;align-items:start}
-.contact-info{display:flex;flex-direction:column;gap:28px}
-.contact-item{display:flex;gap:16px;align-items:flex-start}
-.contact-icon{width:44px;height:44px;border-radius:50%;background:rgba(249,237,232,.1);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
-.contact-item h4{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
-.contact-item p,.contact-item a{font-size:.92rem;color:rgba(249,237,232,.8);text-decoration:none}
-.contact-item a:hover{color:#fff}
-.map-container{border-radius:20px;overflow:hidden;border:1px solid rgba(249,237,232,.1)}
+/* ─── CENÍK ─── */
+.pricing{padding:90px 64px;background:linear-gradient(155deg,#7a3830 0%,var(--rosedk) 50%,#8c4840 100%);position:relative;overflow:hidden}
+.pricing::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 15% 50%,rgba(255,255,255,.06),transparent 55%),radial-gradient(ellipse at 88% 15%,rgba(255,255,255,.04),transparent 50%)}
+.pricing .section-tag{color:var(--mauvelight)}
+.pricing .section-tag::before{color:var(--mauvelight)}
+.pricing .section-h2{color:#fff}
+.pricing .section-h2 em{color:var(--mauvelight)}
+.pgrid{max-width:1180px;margin:48px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pcard{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.11);border-radius:16px;padding:30px 26px;transition:all .3s}
+.pcard:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.2)}
+.pcard.feat{background:rgba(255,255,255,.13);border-color:var(--mauvelight);position:relative}
+.pcard.feat::before{content:'✿ Nejoblíbenější ✿';position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--mauvelight);color:var(--rosedk);font-size:.61rem;letter-spacing:.18em;text-transform:uppercase;padding:5px 16px;border-radius:20px;font-weight:700;white-space:nowrap}
+.pcard h3{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:#fff;margin-bottom:3px}
+.psub{font-size:.69rem;letter-spacing:.1em;color:rgba(255,255,255,.38);margin-bottom:22px}
+.prows{display:flex;flex-direction:column}
+.prow{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.07);gap:10px}
+.prow:last-child{border-bottom:none}
+.prow-l{display:flex;flex-direction:column;gap:2px}
+.prow-n{font-size:.82rem;color:rgba(255,255,255,.76);line-height:1.3}
+.prow-d{font-size:.69rem;color:rgba(255,255,255,.3);letter-spacing:.05em}
+.prow-a{font-family:'Cormorant Garamond',serif;font-size:1.08rem;color:var(--mauvelight);font-weight:600;white-space:nowrap}
+.pnote{margin-top:14px;padding:11px 13px;background:rgba(255,255,255,.05);border-left:2px solid rgba(217,170,170,.35);border-radius:0 8px 8px 0;font-size:.74rem;color:rgba(255,255,255,.42);line-height:1.6}
+.pfooter{max-width:1180px;margin:32px auto 0;text-align:center;padding:16px 24px;border:1px dashed rgba(217,170,170,.25);border-radius:12px;font-size:.83rem;color:rgba(255,255,255,.48)}
+.pfooter a{color:var(--mauvelight);text-decoration:none}
+.pfooter strong{color:rgba(255,255,255,.78)}
 
-/* FOOTER */
-footer{background:var(--dark);color:rgba(249,237,232,.5);text-align:center;padding:32px 40px;font-size:.78rem;letter-spacing:.05em}
-footer span{color:var(--rose)}
+/* ─── JAK TO FUNGUJE ─── */
+.how{padding:90px 64px;background:var(--blush)}
+.how-head{text-align:center;max-width:500px;margin:0 auto 52px}
+.how-head .section-tag{justify-content:center}
+.how-steps{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.step{background:var(--white);border-radius:16px;padding:34px 22px;text-align:center;border:1px solid var(--mauvelight);transition:all .3s}
+.step:hover{transform:translateY(-4px);box-shadow:0 14px 44px rgba(196,133,122,.12);border-color:var(--rose)}
+.step-n{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--rose),var(--mauve));color:#fff;font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;box-shadow:0 6px 18px rgba(196,133,122,.3)}
+.step h4{font-family:'Cormorant Garamond',serif;font-size:1.08rem;font-weight:600;color:var(--text);margin-bottom:9px}
+.step p{font-size:.81rem;color:var(--text3);line-height:1.82}
 
-/* MODAL */
-.modal-overlay{display:none;position:fixed;inset:0;z-index:200;background:rgba(58,44,42,.6);backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:20px}
+/* ─── RECENZE ─── */
+.reviews{padding:90px 64px;background:var(--petal)}
+.reviews-head{text-align:center;max-width:460px;margin:0 auto 50px}
+.reviews-head .section-tag{justify-content:center}
+.rgrid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rcard{background:var(--white);border-radius:16px;padding:30px 26px;border:1px solid var(--mauvelight);border-top:3px solid var(--mauvelight);transition:all .3s}
+.rcard:hover{border-top-color:var(--rose);transform:translateY(-3px);box-shadow:0 12px 40px rgba(196,133,122,.1)}
+.rstars{color:var(--rose);font-size:.84rem;letter-spacing:4px;margin-bottom:15px}
+.rtext{font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:var(--text);line-height:1.88;margin-bottom:16px}
+.rauthor{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--rose)}
+
+/* ─── KONTAKT ─── */
+.contact{padding:90px 64px;background:var(--white);position:relative;overflow:hidden}
+.contact::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--mauvelight),var(--rose),var(--mauvelight),transparent)}
+.contact-inner{max-width:1180px;margin:0 auto}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:46px;align-items:start}
+.cinfo{display:flex;flex-direction:column;gap:20px}
+.citem{display:flex;gap:15px;align-items:flex-start}
+.cico{width:42px;height:42px;border-radius:50%;background:var(--blush);border:1px solid var(--mauvelight);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.clabel{font-size:.63rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rose);margin-bottom:3px;font-weight:500}
+.cval{font-size:.91rem;color:var(--text2);text-decoration:none;line-height:1.5;display:block;transition:color .2s}
+.cval:hover{color:var(--rose)}
+.ccta{display:inline-flex;align-items:center;gap:10px;margin-top:22px;background:linear-gradient(135deg,var(--rose),var(--rosedk));color:#fff;padding:15px 34px;border-radius:30px;text-decoration:none;font-size:.77rem;letter-spacing:.17em;font-weight:500;text-transform:uppercase;transition:all .3s;box-shadow:0 8px 26px rgba(196,133,122,.35)}
+.ccta:hover{transform:translateY(-2px);box-shadow:0 14px 38px rgba(196,133,122,.45)}
+.cmap{border-radius:16px;overflow:hidden;border:2px solid var(--mauvelight);box-shadow:0 10px 40px rgba(196,133,122,.1)}
+
+/* ─── FOOTER ─── */
+footer{background:linear-gradient(135deg,#5e2820,var(--rosedk));color:rgba(255,255,255,.5);text-align:center;padding:44px 40px 30px}
+.flogo{width:70px;height:70px;object-fit:cover;border-radius:50%;border:2px solid rgba(217,170,170,.4);opacity:.75;display:block;margin:0 auto 14px}
+.fbrand{font-family:'Cormorant Garamond',serif;font-size:1.18rem;font-style:italic;color:rgba(255,255,255,.78);margin-bottom:4px}
+.fby{font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px}
+.fdiv{width:50px;height:1px;background:rgba(217,170,170,.3);margin:12px auto}
+footer p{font-size:.74rem;letter-spacing:.07em}
+footer a{color:rgba(217,170,170,.7);text-decoration:none}
+footer a:hover{color:var(--mauvelight)}
+
+/* ─── MODALS ─── */
+.modal-overlay{display:none;position:fixed;inset:0;z-index:300;background:rgba(62,30,28,.65);backdrop-filter:blur(10px);align-items:center;justify-content:center;padding:20px}
 .modal-overlay.open{display:flex}
-.modal{background:var(--light);border-radius:32px;max-width:760px;width:100%;max-height:90vh;overflow-y:auto;position:relative;animation:modalIn .3s ease}
-@keyframes modalIn{from{opacity:0;transform:translateY(30px) scale(.97)}}
-.modal-close{position:sticky;top:0;float:right;margin:20px 20px 0 0;width:36px;height:36px;border-radius:50%;background:rgba(107,76,69,.1);border:none;cursor:pointer;font-size:1.1rem;color:var(--brown);display:flex;align-items:center;justify-content:center;z-index:1;transition:background .2s}
-.modal-close:hover{background:rgba(107,76,69,.2)}
-.modal-header{height:220px;display:flex;align-items:center;justify-content:center;border-radius:32px 32px 0 0}
-.modal-header .emoji{font-size:4rem}
-.modal-header.svc-lifting{background:linear-gradient(135deg,#fde8e2,#f9d0c8)}
-.modal-header.svc-lavove{background:linear-gradient(135deg,#3a2c2a,#6b4c45)}
-.modal-header.svc-anti{background:linear-gradient(135deg,#e8f0e9,#c9dbc9)}
-.modal-header.svc-sportovni{background:linear-gradient(135deg,#e2e8f5,#c9d4e8)}
-.modal-header.svc-indic{background:linear-gradient(135deg,#f5ebd8,#e8d4b4)}
-.modal-header.svc-darce{background:linear-gradient(135deg,#fde8f0,#f9c8db)}
-.modal-header.svc-lymfa{background:linear-gradient(135deg,#dceef5,#b8d8e8)}
-.modal-body{padding:32px 40px 40px}
-.modal-body .svc-tag{margin-bottom:6px}
-.modal-body h2{font-size:2rem;margin-bottom:8px}
-.modal-intro{font-size:.95rem;line-height:1.9;color:#7a6560;margin-bottom:30px}
-.modal-section h4{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:400;color:var(--dark);margin:24px 0 12px;display:flex;align-items:center;gap:8px}
-.modal-section h4::before{content:'✦';color:var(--rose);font-size:.6rem}
-.modal-section ul{list-style:none;display:flex;flex-direction:column;gap:8px}
-.modal-section li{font-size:.88rem;color:var(--text);line-height:1.6;padding-left:18px;position:relative}
-.modal-section li::before{content:'–';position:absolute;left:0;color:var(--rose)}
-.modal-pricing-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
-.modal-price-item{background:#fff;border-radius:14px;padding:16px;border:1px solid rgba(212,137,122,.15);display:flex;flex-direction:column;gap:4px}
-.modal-price-item .desc{font-size:.8rem;color:#9a8582}
-.modal-price-item .dur{font-size:.75rem;color:var(--rose)}
-.modal-price-item .amt{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--rose);font-weight:500;margin-top:4px}
-.modal-cta{margin-top:32px;text-align:center}
+.modal{background:var(--petal);border-radius:22px;max-width:740px;width:100%;max-height:90vh;overflow-y:auto;position:relative;animation:mIn .35s cubic-bezier(.25,.8,.25,1);border:1px solid var(--mauvelight)}
+@keyframes mIn{from{opacity:0;transform:translateY(32px) scale(.97)}}
+.mclose{position:sticky;top:0;float:right;margin:16px 16px 0 0;width:34px;height:34px;border-radius:50%;background:var(--blush);border:1px solid var(--mauvelight);cursor:pointer;font-size:.95rem;color:var(--rose);display:flex;align-items:center;justify-content:center;z-index:1;transition:background .2s}
+.mclose:hover{background:var(--mauvelight)}
+.mhead{height:180px;display:flex;align-items:center;justify-content:center;border-radius:22px 22px 0 0;font-size:3.4rem;position:relative;overflow:hidden}
+.mhead::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.18),transparent 60%)}
+.mh1{background:linear-gradient(135deg,#fdeaea,#f5cece)}
+.mh2{background:linear-gradient(135deg,#ede5e0,#d4c0b8)}
+.mh3{background:linear-gradient(135deg,#dceef5,#b8d8e8)}
+.mh4{background:linear-gradient(135deg,#eaf0ea,#c4d8c4)}
+.mh5{background:linear-gradient(135deg,#e8eaf5,#c8cce8)}
+.mh6{background:linear-gradient(135deg,#f5f0e2,#e8d8b0)}
+.mh7{background:linear-gradient(135deg,#fce8f0,#f4c0d4)}
+.mbody{padding:30px 38px 38px}
+.mtag{font-size:.63rem;letter-spacing:.24em;text-transform:uppercase;color:var(--rose);margin-bottom:7px;display:flex;align-items:center;gap:7px}
+.mtag::before{content:'✿';font-size:.55rem}
+.mbody h2{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:400;color:var(--text);margin-bottom:12px}
+.mbody h2 em{font-style:italic;color:var(--rose)}
+.mintro{font-size:.91rem;line-height:1.95;color:var(--text2);margin-bottom:24px;padding:14px 16px;background:var(--blush);border-radius:10px;border-left:3px solid var(--mauvelight)}
+.msec h4{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--text);margin:20px 0 10px;display:flex;align-items:center;gap:7px}
+.msec h4::before{content:'✿';color:var(--rose);font-size:.55rem}
+.msec ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.msec li{font-size:.86rem;color:var(--text2);padding-left:16px;position:relative;line-height:1.65}
+.msec li::before{content:'–';position:absolute;left:0;color:var(--rose)}
+.mpgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.mpitem{background:var(--white);border-radius:11px;padding:14px;border:1px solid var(--mauvelight);border-bottom:2px solid var(--mauvelight)}
+.mpitem .d{font-size:.77rem;color:var(--text3);margin-bottom:3px}
+.mpitem .t{font-size:.71rem;color:var(--rose);letter-spacing:.05em}
+.mpitem .a{font-family:'Cormorant Garamond',serif;font-size:1.38rem;color:var(--text);font-weight:600;margin-top:5px}
+.mcta{margin-top:26px;text-align:center}
 
-/* ANIM */
-.fade-up{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s}
-.fade-up.visible{opacity:1;transform:none}
-.fade-up:nth-child(2){transition-delay:.1s}
-.fade-up:nth-child(3){transition-delay:.2s}
-.fade-up:nth-child(4){transition-delay:.3s}
+/* ─── REVEAL ─── */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
 
-/* RESPONSIVE */
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:1024px){
+  nav,nav.scrolled{padding:16px 32px}
+  .hero,.lifting,.forwho,.services,.pricing,.how,.reviews,.contact{padding-left:32px;padding-right:32px}
+  .lifting-inner,.forwho-inner{gap:48px}
+}
 @media(max-width:900px){
-  nav{padding:16px 24px}
-  nav.scrolled{padding:12px 24px}
+  nav,nav.scrolled{padding:14px 22px}
   .nav-links{display:none}
-  .hero{grid-template-columns:1fr;padding:100px 24px 60px;text-align:center}
-  .hero-content{padding:0}
-  .hero-sub{margin:0 auto 36px}
-  .hero-btns{justify-content:center}
-  .hero-badges{justify-content:center}
-  .hero-visual{display:none}
-  .forwho-grid,.contact-grid{grid-template-columns:1fr}
-  .services-grid,.testimonials-grid{grid-template-columns:1fr 1fr}
-  .pricing-grid{grid-template-columns:1fr}
-  .steps-grid{grid-template-columns:1fr 1fr}
-  .step::after{display:none}
-  section{padding:60px 24px}
-  .modal-body{padding:24px}
+  .hero{grid-template-columns:1fr;padding:100px 28px 64px;text-align:center}
+  .hero-text{padding:0}
+  .hero-pretitle,.hero-btns,.hero-stats{justify-content:center}
+  .hero-desc{margin:0 auto 32px}
+  .hero-visual{margin-top:44px}
+  .hero-tag.t1{right:-6px}.hero-tag.t2{left:-6px}
+  .lifting-inner,.forwho-inner{grid-template-columns:1fr;gap:36px}
+  .lifting-visual-wrap{display:none}
+  .sgrid{grid-template-columns:1fr 1fr}
+  .pgrid{grid-template-columns:1fr}
+  .how-steps{grid-template-columns:1fr 1fr}
+  .rgrid{grid-template-columns:1fr 1fr}
+  .cgrid{grid-template-columns:1fr}
 }
 @media(max-width:600px){
-  .services-grid,.testimonials-grid,.forwho-cards{grid-template-columns:1fr}
-  .steps-grid{grid-template-columns:1fr}
-  .modal-pricing-grid{grid-template-columns:1fr}
+  .hero{padding:88px 20px 52px}
+  .hero-stats{gap:14px}
+  .sgrid,.rgrid,.fw-cards{grid-template-columns:1fr}
+  .how-steps{grid-template-columns:1fr}
+  .mpgrid{grid-template-columns:1fr}
+  .mbody{padding:22px 22px 30px}
+  .logo-wrap{width:260px}
 }
 </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav id="nav">
-  <a href="#" class="nav-logo">Omlazení Dotekem</a>
+  <a href="#" class="nav-left">
+    <img src="images/logo.jpg" alt="Omlazení Dotekem" class="nav-logo">
+    <div class="nav-name">Omlazení Dotekem<small>by Iveta Vaníčková</small></div>
+  </a>
   <ul class="nav-links">
+    <li><a href="#lifting">Lifting</a></li>
     <li><a href="#sluzby">Masáže</a></li>
     <li><a href="#cenik">Ceník</a></li>
-    <li><a href="#jak-to-funguje">Jak to funguje</a></li>
     <li><a href="#kontakt" class="nav-cta">Objednat se</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <section class="hero" id="top">
-  <div class="hero-content">
-    <div class="hero-tag">Masáže v pohodlí domova</div>
-    <h1>Péče, kterou<br>vaše tělo <em>zaslouží</em></h1>
-    <p class="hero-sub">Profesionální relaxační a wellness masáže přímo u vás doma. Věnuji se ženám, které chtějí pečovat o sebe – bez shonu, bez salónu, jen čisté blaho.</p>
+  <div class="hero-text">
+    <div class="hero-pretitle">Masáže pro ženy · Týnec nad Sázavou</div>
+    <h1 class="hero-h1">Péče, která vás<br><em>rozkvete.</em></h1>
+    <p class="hero-sub">by Iveta Vaníčková</p>
+    <p class="hero-desc">Přijedu za vámi domů. Profesionální masáže šité na míru ženám – s jemností, diskrétností a 17 lety zkušeností.</p>
     <div class="hero-btns">
-      <a href="#kontakt" class="btn-primary">Objednat masáž</a>
-      <a href="#sluzby" class="btn-outline">Prohlédnout nabídku</a>
+      <a href="#lifting" class="btn-main">Manuální lifting obličeje</a>
+      <a href="#sluzby" class="btn-sec">Všechny masáže</a>
     </div>
-    <div class="hero-badges">
-      <div class="badge"><div class="badge-icon">🚗</div>Jedu za vámi domů</div>
-      <div class="badge"><div class="badge-icon">✨</div>17 let zkušeností</div>
-      <div class="badge"><div class="badge-icon">🌿</div>Přírodní oleje Saloos</div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-n">17</div><div class="stat-l">let zkušeností</div></div>
+      <div class="stat"><div class="stat-n">10 km</div><div class="stat-l">dojezd zdarma</div></div>
+      <div class="stat"><div class="stat-n">100%</div><div class="stat-l">přírodní oleje</div></div>
     </div>
   </div>
   <div class="hero-visual">
-    <div class="hero-circle">
-      <!-- Logo: nahraďte src cestou k vašemu logu, např. src="logo.png" -->
-      <div class="hero-logo-placeholder">🌳</div>
-      <div class="hero-circle-name">Iveta Vaníčková</div>
-      <div class="hero-circle-sub">Masérka &amp; wellness specialistka</div>
+    <div class="logo-wrap">
+      <img src="images/logo.jpg" alt="Omlazení Dotekem – Iveta Vaníčková" class="hero-logo-img">
     </div>
-    <div class="float-pill p1"><span class="pill-num">5★</span>&nbsp; Hodnocení klientek</div>
-    <div class="float-pill p2"><span class="pill-num">10 km</span>&nbsp; dojezd zdarma</div>
+    <div class="hero-tag t1">✿ <b>5★</b> spokojené klientky</div>
+    <div class="hero-tag t2">🚗 <b>10 km</b> dojezd zdarma</div>
+  </div>
+</section>
+
+<!-- RIBBON -->
+<div class="ribbon">
+  <div class="ribbon-track">
+    <span class="ritem">Manuální lifting obličeje</span><span class="ritem rsep">✿</span>
+    <span class="ritem">Lávové kameny</span><span class="ritem rsep">✿</span>
+    <span class="ritem">Lymfatická masáž</span><span class="ritem rsep">✿</span>
+    <span class="ritem">Anticelulitidní ošetření</span><span class="ritem rsep">✿</span>
+    <span class="ritem">Indická masáž hlavy</span><span class="ritem rsep">✿</span>
+    <span class="ritem">Sportovní masáž</span><span class="ritem rsep">✿</span>
+    <span class="ritem">Manuální lifting obličeje</span><span class="ritem rsep">✿</span>
+    <span class="ritem">Lávové kameny</span><span class="ritem rsep">✿</span>
+    <span class="ritem">Lymfatická masáž</span><span class="ritem rsep">✿</span>
+    <span class="ritem">Anticelulitidní ošetření</span><span class="ritem rsep">✿</span>
+    <span class="ritem">Indická masáž hlavy</span><span class="ritem rsep">✿</span>
+    <span class="ritem">Sportovní masáž</span><span class="ritem rsep">✿</span>
+  </div>
+</div>
+
+<!-- LIFTING -->
+<section class="lifting" id="lifting">
+  <div class="lifting-inner">
+    <div class="reveal">
+      <div class="lbadge">✿ Hlavní specialita</div>
+      <div class="section-tag">Omlazení &amp; péče o pleť</div>
+      <h2 class="section-h2">Manuální lifting<br><em>obličeje</em></h2>
+      <p class="section-p">Přirozená alternativa k estetickým zákrokům. Pomocí speciálních manuálních technik a prémiových olejů Saloos pracuji se svaly obličeje – výsledky vidíte již po prvním ošetření. Bez jehel, bez chemie, jen jemné ruce a vaše krásná pleť.</p>
+      <ul class="lifting-list">
+        <li>Viditelné zpevnění a lifting kontur obličeje</li>
+        <li>Redukce jemných vrásek a nasolabiálních rýh</li>
+        <li>Zářivá, prokrvená a hydratovaná pleť</li>
+        <li>Uvolnění chronického napětí čelistí a čela</li>
+        <li>Lymfodrenáž – pomoc s otoky a migrénou</li>
+        <li>Hluboký pocit klidu a celkové pohody</li>
+      </ul>
+      <div class="price-chip">
+        <span class="price-from">od</span>
+        <span class="price-amt">750 Kč</span>
+      </div>
+      <div style="display:flex;gap:13px;flex-wrap:wrap">
+        <button onclick="openModal('lifting')" class="btn-main">Více informací</button>
+        <a href="#kontakt" class="btn-sec">Objednat se</a>
+      </div>
+    </div>
+    <div class="lifting-visual-wrap reveal d2">
+      <div class="lv-blob">✨</div>
+      <div class="lv-tag lv1"><div class="lvt-l">Výsledky viditelné</div><div class="lvt-v">po 1. ošetření</div></div>
+      <div class="lv-tag lv2"><div class="lvt-l">Prémiové oleje</div><div class="lvt-v">Saloos bio</div></div>
+    </div>
   </div>
 </section>
 
 <!-- PRO KOHO -->
 <section class="forwho" id="pro-koho">
-  <div class="container">
-    <div class="forwho-grid">
-      <div class="forwho-text fade-up">
-        <div class="section-tag">Pro koho jsem tu</div>
-        <h2>Stvořeno<br>pro <em>ženy</em></h2>
-        <p class="section-lead">Svou péči věnuji ženám – těm, které se starají o druhé, a na sebe zapomínají. Ženám, které touží po odpočinku, které chtějí zpevnit, omlazovat a pečovat o sebe přirozenou cestou.</p>
-        <ul class="forwho-list">
-          <li>Přicházím za vámi – žádné parkování, žádný shon</li>
-          <li>Diskrétní prostředí vašeho domova</li>
-          <li>Individuální přístup a konzultace zdarma</li>
-          <li>Přírodní produkty bez agresivní chemie</li>
-        </ul>
-      </div>
-      <div class="forwho-cards">
-        <div class="forwho-card fade-up">
-          <div class="forwho-icon">🌸</div>
-          <h4>Maminky a ženy v péči</h4>
-          <p>Zasloužíte si chvíli jen pro sebe</p>
-        </div>
-        <div class="forwho-card fade-up">
-          <div class="forwho-icon">💼</div>
-          <h4>Pracovně vytížené</h4>
-          <p>Odbourat stres a dobít energii</p>
-        </div>
-        <div class="forwho-card fade-up">
-          <div class="forwho-icon">✨</div>
-          <h4>Dbající o vzhled</h4>
-          <p>Lifting, omlazení, péče o pleť</p>
-        </div>
-        <div class="forwho-card fade-up">
-          <div class="forwho-icon">🏃‍♀️</div>
-          <h4>Sportovkyně</h4>
-          <p>Regenerace a péče o svaly</p>
-        </div>
-      </div>
+  <div class="forwho-inner">
+    <div class="reveal">
+      <div class="section-tag">Pro koho jsem tu</div>
+      <h2 class="section-h2">Stvořeno<br>pro <em>vás</em></h2>
+      <p class="section-p">Svou péči věnuji ženám – těm, které se starají o druhé, a na sebe zapomínají. Přijedu za vámi v okruhu 10 km od Týnce nad Sázavou.</p>
+      <ul class="fw-list">
+        <li><div class="fw-ico">🚗</div><span>Přicházím za vámi – žádné parkování, žádný shon</span></li>
+        <li><div class="fw-ico">🤫</div><span>Diskrétní prostředí vašeho domova</span></li>
+        <li><div class="fw-ico">💬</div><span>Individuální přístup a konzultace zdarma</span></li>
+        <li><div class="fw-ico">🌿</div><span>Pouze přírodní produkty Saloos bez agresivní chemie</span></li>
+      </ul>
+    </div>
+    <div class="fw-cards">
+      <div class="fw-card reveal d1"><div class="fw-card-ico">🌸</div><h4>Maminky &amp; ženy v péči</h4><p>Zasloužíte si chvíli jen pro sebe</p></div>
+      <div class="fw-card reveal d2"><div class="fw-card-ico">💼</div><h4>Pracovně vytížené</h4><p>Odbourat stres a dobít energii</p></div>
+      <div class="fw-card reveal d1"><div class="fw-card-ico">✨</div><h4>Dbající o vzhled</h4><p>Lifting, omlazení, péče o pleť</p></div>
+      <div class="fw-card reveal d2"><div class="fw-card-ico">🏃‍♀️</div><h4>Sportovkyně</h4><p>Regenerace a péče o svaly</p></div>
     </div>
   </div>
 </section>
 
 <!-- SLUŽBY -->
 <section class="services" id="sluzby">
-  <div class="container">
-    <div class="services-intro">
-      <div>
-        <div class="section-tag">Nabídka masáží</div>
-        <h2>Vyberte si <em>svůj</em> rituál</h2>
+  <div class="services-head reveal">
+    <div class="section-tag">Nabídka masáží</div>
+    <h2 class="section-h2">Vyberte si <em>svůj</em> rituál</h2>
+    <p style="font-size:.86rem;color:var(--text3);margin-top:8px">Kliknutím na kartu zobrazíte podrobné informace a ceník.</p>
+  </div>
+  <div class="sgrid">
+    <div class="scard reveal d1" onclick="openModal('lavove')">
+      <div class="scard-top ct2">🪨</div>
+      <div class="scard-body">
+        <div class="scard-tag">Královská relaxace</div>
+        <h3>Masáž lávovými kameny</h3>
+        <p>Termální terapie s vulkanickými kameny. Hluboké uvolnění svalů a naprostý klid.</p>
+        <div class="scard-foot"><span class="scard-price">od 750 Kč</span><span class="scard-more">Detail →</span></div>
       </div>
-      <p style="font-size:.85rem;color:#9a8582;max-width:280px;text-align:right;line-height:1.7">Kliknutím na kartu zobrazíte podrobné informace, přínosy a ceník.</p>
     </div>
-    <div class="services-grid">
-
-      <!-- Lifting -->
-      <div class="service-card svc-lifting fade-up" onclick="openModal('lifting')">
-        <div class="svc-badge-new oblibene">Oblíbené</div>
-        <div class="service-card-top"><span class="emoji">✨</span></div>
-        <div class="service-card-body">
-          <div class="svc-tag">Omlazení &amp; péče o pleť</div>
-          <h3>Manuální lifting obličeje</h3>
-          <p>Přirozené omlazení bez injekce. Zpevnění kontur, redukce vrásek a zářivá pleť díky přírodním olejům Saloos.</p>
-          <div class="svc-footer">
-            <span class="svc-price">od 750 Kč</span>
-            <a class="svc-link">Více info →</a>
-          </div>
-        </div>
+    <div class="scard reveal d2" onclick="openModal('lymfa')">
+      <div class="scard-top ct3"><div class="sbadge sb-new">Nové</div>💧</div>
+      <div class="scard-body">
+        <div class="scard-tag">Detox &amp; odlehčení</div>
+        <h3>Lymfatická masáž</h3>
+        <p>Jemná technika pro odvodnění, redukci otoků a posílení imunity.</p>
+        <div class="scard-foot"><span class="scard-price">od 650 Kč</span><span class="scard-more">Detail →</span></div>
       </div>
-
-      <!-- Lávové kameny -->
-      <div class="service-card svc-lavove fade-up" onclick="openModal('lavove')">
-        <div class="service-card-top"><span class="emoji">🪨</span></div>
-        <div class="service-card-body">
-          <div class="svc-tag">Královská relaxace</div>
-          <h3>Masáž lávovými kameny</h3>
-          <p>Luxusní termální terapie s vulkanickými kameny. Hluboké uvolnění svalů, rozproudění oběhu a naprostý klid.</p>
-          <div class="svc-footer">
-            <span class="svc-price">od 750 Kč</span>
-            <a class="svc-link">Více info →</a>
-          </div>
-        </div>
+    </div>
+    <div class="scard reveal d3" onclick="openModal('anti')">
+      <div class="scard-top ct4">🌿</div>
+      <div class="scard-body">
+        <div class="scard-tag">Formování postavy</div>
+        <h3>Anticelulitidní masáž + zábal</h3>
+        <p>Intenzivní ošetření s ozonovým zábalem pro hladší pokožku a tvarování siluety.</p>
+        <div class="scard-foot"><span class="scard-price">od 900 Kč</span><span class="scard-more">Detail →</span></div>
       </div>
-
-      <!-- Lymfatická -->
-      <div class="service-card svc-lymfa fade-up" onclick="openModal('lymfa')">
-        <div class="svc-badge-new nove">Nové</div>
-        <div class="service-card-top"><span class="emoji">💧</span></div>
-        <div class="service-card-body">
-          <div class="svc-tag">Detox &amp; odlehčení těla</div>
-          <h3>Lymfatická masáž</h3>
-          <p>Jemná technika stimulující lymfatický systém. Zbavte se otoků, pocitu těžkých nohou a celulitidy. Posiluje imunitu a pomáhá detoxikaci.</p>
-          <div class="svc-footer">
-            <span class="svc-price">od 650 Kč</span>
-            <a class="svc-link">Více info →</a>
-          </div>
-        </div>
+    </div>
+    <div class="scard reveal d1" onclick="openModal('sportovni')">
+      <div class="scard-top ct5">💪</div>
+      <div class="scard-body">
+        <div class="scard-tag">Regenerace &amp; výkon</div>
+        <h3>Sportovní &amp; regenerační masáž</h3>
+        <p>Cílená práce se svaly, prevence zranění a zrychlení regenerace.</p>
+        <div class="scard-foot"><span class="scard-price">od 700 Kč</span><span class="scard-more">Detail →</span></div>
       </div>
-
-      <!-- Anticelulitidní -->
-      <div class="service-card svc-anti fade-up" onclick="openModal('anti')">
-        <div class="service-card-top"><span class="emoji">🌿</span></div>
-        <div class="service-card-body">
-          <div class="svc-tag">Formování postavy</div>
-          <h3>Anticelulitidní masáž + zábal</h3>
-          <p>Intenzivní masáž s ozonovým zábalem pro hladší pokožku, tvarování siluety a detoxikaci tkání.</p>
-          <div class="svc-footer">
-            <span class="svc-price">od 900 Kč</span>
-            <a class="svc-link">Více info →</a>
-          </div>
-        </div>
+    </div>
+    <div class="scard reveal d2" onclick="openModal('indic')">
+      <div class="scard-top ct6">🕊️</div>
+      <div class="scard-body">
+        <div class="scard-tag">Hlava &amp; klid mysli</div>
+        <h3>Indická masáž hlavy</h3>
+        <p>Tradiční technika pro uvolnění napětí, migrény a hluboký mentální odpočinek.</p>
+        <div class="scard-foot"><span class="scard-price">od 600 Kč</span><span class="scard-more">Detail →</span></div>
       </div>
-
-      <!-- Sportovní -->
-      <div class="service-card svc-sportovni fade-up" onclick="openModal('sportovni')">
-        <div class="service-card-top"><span class="emoji">💪</span></div>
-        <div class="service-card-body">
-          <div class="svc-tag">Regenerace &amp; výkon</div>
-          <h3>Sportovní &amp; regenerační masáž</h3>
-          <p>Cílená práce se svalovými skupinami. Prevence zranění, zrychlení regenerace a úleva od bolesti.</p>
-          <div class="svc-footer">
-            <span class="svc-price">od 700 Kč</span>
-            <a class="svc-link">Více info →</a>
-          </div>
-        </div>
+    </div>
+    <div class="scard reveal d3" onclick="openModal('darce')">
+      <div class="scard-top ct7">🎁</div>
+      <div class="scard-body">
+        <div class="scard-tag">Dárek pro blízkého</div>
+        <h3>Dárkový poukaz</h3>
+        <p>Darujte zážitek. Poukazy v libovolné hodnotě na vybranou masáž.</p>
+        <div class="scard-foot"><span class="scard-price">dle výběru</span><span class="scard-more">Detail →</span></div>
       </div>
-
-      <!-- Indická -->
-      <div class="service-card svc-indic fade-up" onclick="openModal('indic')">
-        <div class="service-card-top"><span class="emoji">🕊️</span></div>
-        <div class="service-card-body">
-          <div class="svc-tag">Hlava &amp; duševní pohoda</div>
-          <h3>Indická masáž hlavy</h3>
-          <p>Tradiční technika uvolňující napětí v hlavě, šíji a ramenou. Migréna, stres, únava – toto je vaše odpověď.</p>
-          <div class="svc-footer">
-            <span class="svc-price">od 600 Kč</span>
-            <a class="svc-link">Více info →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Dárkový poukaz -->
-      <div class="service-card svc-darce fade-up" onclick="openModal('darce')">
-        <div class="service-card-top"><span class="emoji">🎁</span></div>
-        <div class="service-card-body">
-          <div class="svc-tag">Dárek pro blízkého</div>
-          <h3>Dárkový poukaz</h3>
-          <p>Darujte zážitek. Poukazy v libovolné hodnotě na vybranou masáž – narozeniny, Vánoce nebo jen tak.</p>
-          <div class="svc-footer">
-            <span class="svc-price">dle výběru</span>
-            <a class="svc-link">Zjistit více →</a>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
 <!-- CENÍK -->
 <section class="pricing" id="cenik">
-  <div class="container">
-    <div class="pricing-intro">
-      <div>
-        <div class="section-tag">Ceník 2025</div>
-        <h2>Transparentní <em>ceny</em></h2>
-      </div>
-      <p style="font-size:.85rem;color:#9a8582;max-width:260px;text-align:right;line-height:1.7">Všechny ceny jsou konečné, bez skrytých poplatků.</p>
+  <div style="max-width:1180px;margin:0 auto;position:relative;z-index:1">
+    <div class="reveal">
+      <div class="section-tag">Ceník 2025</div>
+      <h2 class="section-h2">Transparentní <em>ceny</em></h2>
     </div>
-    <div class="pricing-grid">
-
-      <!-- Karta 1: Lávové kameny -->
-      <div class="pricing-card fade-up">
-        <h3>Lávové kameny</h3>
-        <div class="sub">Hot stone masáž – dle rozsahu</div>
-        <div class="price-rows">
-          <div class="price-row"><span>Záda, šíje<span class="duration"> · 45 min</span></span><span class="price-amount">750 Kč</span></div>
-          <div class="price-row"><span>Záda, šíje + paže<span class="duration"> · 75 min</span></span><span class="price-amount">950 Kč</span></div>
-          <div class="price-row"><span>Dolní končetiny<span class="duration"> · 45 min</span></span><span class="price-amount">750 Kč</span></div>
-          <div class="price-row"><span>Záda + dolní konč.<span class="duration"> · 75 min</span></span><span class="price-amount">950 Kč</span></div>
-          <div class="price-row"><span>Relaxační (dekolt, šíje, paže, hlava)<span class="duration"> · 60 min</span></span><span class="price-amount">850 Kč</span></div>
-          <div class="price-row"><span>Celé tělo (bez obličeje)<span class="duration"> · 90 min</span></span><span class="price-amount">1 250 Kč</span></div>
-          <div class="price-row"><span>Celé tělo – premium<span class="duration"> · 120 min</span></span><span class="price-amount">1 600 Kč</span></div>
+    <div class="pgrid">
+      <div class="pcard reveal d1">
+        <h3>Lávové kameny</h3><div class="psub">Hot stone masáž · dle rozsahu</div>
+        <div class="prows">
+          <div class="prow"><div class="prow-l"><span class="prow-n">Záda, šíje</span><span class="prow-d">45 min</span></div><span class="prow-a">750 Kč</span></div>
+          <div class="prow"><div class="prow-l"><span class="prow-n">Záda, šíje + paže</span><span class="prow-d">75 min</span></div><span class="prow-a">950 Kč</span></div>
+          <div class="prow"><div class="prow-l"><span class="prow-n">Dolní končetiny</span><span class="prow-d">45 min</span></div><span class="prow-a">750 Kč</span></div>
+          <div class="prow"><div class="prow-l"><span class="prow-n">Záda + dolní konč.</span><span class="prow-d">75 min</span></div><span class="prow-a">950 Kč</span></div>
+          <div class="prow"><div class="prow-l"><span class="prow-n">Relaxační (dekolt, šíje, paže, hlava)</span><span class="prow-d">60 min</span></div><span class="prow-a">850 Kč</span></div>
+          <div class="prow"><div class="prow-l"><span class="prow-n">Celé tělo (bez obličeje)</span><span class="prow-d">90 min</span></div><span class="prow-a">1 250 Kč</span></div>
+          <div class="prow"><div class="prow-l"><span class="prow-n">Celé tělo – premium</span><span class="prow-d">120 min</span></div><span class="prow-a">1 600 Kč</span></div>
         </div>
-        <div class="pricing-note">🪨 Vulkanické kameny ohřáté na 45–55 °C. Hluboká svalová terapie.</div>
+        <div class="pnote">🪨 Vulkanické kameny zahřáté na 45–55 °C.</div>
       </div>
-
-      <!-- Karta 2: Omlazení & formování (featured) -->
-      <div class="pricing-card featured fade-up">
-        <h3>Omlazení &amp; formování</h3>
-        <div class="sub">Lifting · Lymfatická · Anticelulitidní</div>
-        <div class="price-rows">
-          <div class="price-row"><span>Manuální lifting obličeje<span class="duration"> · 60 min</span></span><span class="price-amount">750 Kč</span></div>
-          <div class="price-row"><span>Lifting + zábal dekoltu<span class="duration"> · 90 min</span></span><span class="price-amount">1 050 Kč</span></div>
-          <div class="price-row"><span>Lymfatická – částečná<span class="duration"> · 45 min</span></span><span class="price-amount">650 Kč</span></div>
-          <div class="price-row"><span>Lymfatická – celé tělo<span class="duration"> · 60 min</span></span><span class="price-amount">750 Kč</span></div>
-          <div class="price-row"><span>Lymfatická + anticel. zábal<span class="duration"> · 90 min</span></span><span class="price-amount">1 050 Kč</span></div>
-          <div class="price-row"><span>Anticelulitidní + zábal<span class="duration"> · 60–75 min</span></span><span class="price-amount">900 Kč</span></div>
+      <div class="pcard feat reveal d2">
+        <h3>Omlazení &amp; formování</h3><div class="psub">Lifting · Lymfatická · Anticelulitidní</div>
+        <div class="prows">
+          <div class="prow"><div class="prow-l"><span class="prow-n">Manuální lifting obličeje</span><span class="prow-d">60 min</span></div><span class="prow-a">750 Kč</span></div>
+          <div class="prow"><div class="prow-l"><span class="prow-n">Lifting + zábal dekoltu</span><span class="prow-d">90 min</span></div><span class="prow-a">1 050 Kč</span></div>
+          <div class="prow"><div class="prow-l"><span class="prow-n">Lymfatická – částečná</span><span class="prow-d">45 min</span></div><span class="prow-a">650 Kč</span></div>
+          <div class="prow"><div class="prow-l"><span class="prow-n">Lymfatická – celé tělo</span><span class="prow-d">60 min</span></div><span class="prow-a">750 Kč</span></div>
+          <div class="prow"><div class="prow-l"><span class="prow-n">Lymfatická + anticel. zábal</span><span class="prow-d">90 min</span></div><span class="prow-a">1 050 Kč</span></div>
+          <div class="prow"><div class="prow-l"><span class="prow-n">Anticelulitidní + zábal</span><span class="prow-d">60–75 min</span></div><span class="prow-a">900 Kč</span></div>
         </div>
-        <div class="pricing-note">✨ Série ošetření za výhodné ceny – informujte se při objednávce.</div>
+        <div class="pnote">✿ Série ošetření za výhodné ceny – ptejte se při objednávce.</div>
       </div>
-
-      <!-- Karta 3: Relaxace & regenerace -->
-      <div class="pricing-card fade-up">
-        <h3>Relaxace &amp; regenerace</h3>
-        <div class="sub">Sportovní · Indická · Poukazy</div>
-        <div class="price-rows">
-          <div class="price-row"><span>Sportovní – záda, šíje<span class="duration"> · 60 min</span></span><span class="price-amount">700 Kč</span></div>
-          <div class="price-row"><span>Sportovní – celotělová<span class="duration"> · 90 min</span></span><span class="price-amount">1 000 Kč</span></div>
-          <div class="price-row"><span>Indická masáž hlavy<span class="duration"> · 45 min</span></span><span class="price-amount">600 Kč</span></div>
-          <div class="price-row"><span>Indická + záda a dekolt<span class="duration"> · 60 min</span></span><span class="price-amount">800 Kč</span></div>
-          <div class="price-row"><span>Dárkový poukaz<span class="duration"> · dle výběru</span></span><span class="price-amount">dle výběru</span></div>
+      <div class="pcard reveal d3">
+        <h3>Relaxace &amp; regenerace</h3><div class="psub">Sportovní · Indická · Poukazy</div>
+        <div class="prows">
+          <div class="prow"><div class="prow-l"><span class="prow-n">Sportovní – záda, šíje</span><span class="prow-d">60 min</span></div><span class="prow-a">700 Kč</span></div>
+          <div class="prow"><div class="prow-l"><span class="prow-n">Sportovní – celotělová</span><span class="prow-d">90 min</span></div><span class="prow-a">1 000 Kč</span></div>
+          <div class="prow"><div class="prow-l"><span class="prow-n">Indická masáž hlavy</span><span class="prow-d">45 min</span></div><span class="prow-a">600 Kč</span></div>
+          <div class="prow"><div class="prow-l"><span class="prow-n">Indická + záda a dekolt</span><span class="prow-d">60 min</span></div><span class="prow-a">800 Kč</span></div>
+          <div class="prow"><div class="prow-l"><span class="prow-n">Dárkový poukaz</span><span class="prow-d">dle výběru</span></div><span class="prow-a">dle výběru</span></div>
         </div>
-        <div class="pricing-note">💬 Ceny lze upravit dle rozsahu. Neváhejte se zeptat.</div>
+        <div class="pnote">💬 Ceny přizpůsobím dle vašich potřeb.</div>
       </div>
-
     </div>
-    <div class="pricing-surcharge fade-up">
-      🚗 <strong>Dojezd:</strong> Do 10 km od Týnce nad Sázavou <strong>zdarma</strong> &nbsp;·&nbsp; Nad 10 km příplatek dle dohody &nbsp;·&nbsp; 📞 <a href="tel:+420606674207" style="color:var(--rose)">606 674 207</a>
-    </div>
+    <div class="pfooter reveal">🚗 <strong>Dojezd:</strong> Do 10 km od Týnce nad Sázavou <strong>zdarma</strong> &nbsp;·&nbsp; Nad 10 km příplatek dle dohody &nbsp;·&nbsp; <a href="tel:+420606674207">📞 606 674 207</a></div>
   </div>
 </section>
 
 <!-- JAK TO FUNGUJE -->
-<section class="howitworks" id="jak-to-funguje">
-  <div class="container">
-    <div style="text-align:center;margin-bottom:50px" class="fade-up">
-      <div class="section-tag" style="justify-content:center">Jak to funguje</div>
-      <h2>Jednoduché jako <em>dech</em></h2>
-    </div>
-    <div class="steps-grid">
-      <div class="step fade-up">
-        <div class="step-num">1</div>
-        <h4>Zavolejte nebo napište</h4>
-        <p>Domluvíme termín, místo a vybraný typ masáže dle vašich potřeb.</p>
-      </div>
-      <div class="step fade-up">
-        <div class="step-num">2</div>
-        <h4>Připravte si místo</h4>
-        <p>Stačí klidný koutek (cca 2×1,5 m). Vše ostatní přivezu – stůl, oleje, kameny.</p>
-      </div>
-      <div class="step fade-up">
-        <div class="step-num">3</div>
-        <h4>Přijedu za vámi</h4>
-        <p>Punktuálně na domluvený čas. Krátká konzultace, pak naprostý relax.</p>
-      </div>
-      <div class="step fade-up">
-        <div class="step-num">4</div>
-        <h4>Užijte si blaženost</h4>
-        <p>Žádný spěch po masáži. Zůstáváte doma – vychutnejte každou minutu.</p>
-      </div>
-    </div>
+<section class="how" id="jak-to-funguje">
+  <div class="how-head reveal">
+    <div class="section-tag">Jak to funguje</div>
+    <h2 class="section-h2">Jednoduché jako <em>dech</em></h2>
+  </div>
+  <div class="how-steps">
+    <div class="step reveal"><div class="step-n">1</div><h4>Zavolejte nebo napište</h4><p>Domluvíme termín, místo a typ masáže přesně dle vašich přání.</p></div>
+    <div class="step reveal d1"><div class="step-n">2</div><h4>Připravte si místo</h4><p>Stačí klidný koutek (cca 2 × 1,5 m). Vše ostatní přivezu – stůl, oleje i kameny.</p></div>
+    <div class="step reveal d2"><div class="step-n">3</div><h4>Přijedu za vámi</h4><p>Přijdu přesně v domluvený čas, v klidu si popovídáme o vašich potřebách – a pak už jen relaxujete.</p></div>
+    <div class="step reveal d3"><div class="step-n">4</div><h4>Užijte si blaženost</h4><p>Žádný spěch. Zůstáváte doma – vychutnejte každou minutu pohody.</p></div>
   </div>
 </section>
 
-<!-- REFERENCE -->
-<section class="testimonials">
-  <div class="container">
-    <div style="text-align:center;margin-bottom:50px" class="fade-up">
-      <div class="section-tag" style="justify-content:center">Říkají o mně</div>
-      <h2>Spokojené <em>klientky</em></h2>
+<!-- RECENZE -->
+<section class="reviews">
+  <div class="reviews-head reveal">
+    <div class="section-tag">Říkají o mně</div>
+    <h2 class="section-h2">Spokojené <em>klientky</em></h2>
+  </div>
+  <div class="rgrid">
+    <div class="rcard reveal d1">
+      <div class="rstars">★★★★★</div>
+      <p class="rtext">„Iveta přijela přesně na čas, přinesla si vše s sebou a masáž lávovými kameny byla naprosto božská. Příště si objednám celotělovou."</p>
+      <div class="rauthor">— Martina K., Týnec nad Sázavou</div>
     </div>
-    <div class="testimonials-grid">
-      <div class="testimonial fade-up">
-        <div class="stars">★★★★★</div>
-        <p>"Iveta přijela přesně na čas, přinesla si vše s sebou a masáž lávovými kameny byla naprosto božská. Příště si objednám celotělovou."</p>
-        <div class="testimonial-author">— Martina K., Týnec nad Sázavou</div>
-      </div>
-      <div class="testimonial fade-up">
-        <div class="stars">★★★★★</div>
-        <p>"Manuální lifting obličeje jsem zkoušela poprvé a jsem nadšená. Pleť vypadá svěže, vrásky se viditelně zjemnily. Rozhodně opakuji!"</p>
-        <div class="testimonial-author">— Lenka B., Benešov</div>
-      </div>
-      <div class="testimonial fade-up">
-        <div class="stars">★★★★★</div>
-        <p>"Dala jsem poukaz mámě na narozeniny. Říkala, že ještě nikdy nebyla tak relaxovaná. Nejlepší dárek, co jsem mohla vymyslet."</p>
-        <div class="testimonial-author">— Jana P., Votice</div>
-      </div>
+    <div class="rcard reveal d2">
+      <div class="rstars">★★★★★</div>
+      <p class="rtext">„Manuální lifting obličeje jsem zkoušela poprvé a jsem nadšená. Pleť vypadá svěže, vrásky se viditelně zjemnily. Rozhodně opakuji!"</p>
+      <div class="rauthor">— Lenka B., Benešov</div>
+    </div>
+    <div class="rcard reveal d3">
+      <div class="rstars">★★★★★</div>
+      <p class="rtext">„Dala jsem poukaz mámě na narozeniny. Říkala, že ještě nikdy nebyla tak relaxovaná. Nejlepší dárek, co jsem mohla vymyslet."</p>
+      <div class="rauthor">— Jana P., Votice</div>
     </div>
   </div>
 </section>
 
 <!-- KONTAKT -->
 <section class="contact" id="kontakt">
-  <div class="container">
+  <div class="contact-inner">
     <div class="section-tag">Kontakt</div>
-    <h2>Objednejte se <em>ještě dnes</em></h2>
-    <div class="contact-grid">
-      <div class="contact-info fade-up">
-        <div class="contact-item">
-          <div class="contact-icon">📞</div>
-          <div><h4>Telefon</h4><a href="tel:+420606674207">606 674 207</a></div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">✉️</div>
-          <div><h4>Email</h4><a href="mailto:info@ivetavanickova.cz">info@ivetavanickova.cz</a></div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">📍</div>
-          <div><h4>Oblast působení</h4><p>Týnec nad Sázavou a okolí do 10 km zdarma</p></div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">🕐</div>
-          <div><h4>Objednávky</h4><p>Po–So 8:00–20:00 (dle dohody i Ne)</p></div>
-        </div>
-        <a href="tel:+420606674207" class="btn-primary" style="align-self:flex-start;margin-top:8px">📞 Zavolat a objednat se</a>
+    <h2 class="section-h2">Objednejte se <em>ještě dnes</em></h2>
+    <div class="cgrid">
+      <div class="cinfo reveal">
+        <div class="citem"><div class="cico">📞</div><div><div class="clabel">Telefon</div><a href="tel:+420606674207" class="cval">606 674 207</a></div></div>
+        <div class="citem"><div class="cico">✉️</div><div><div class="clabel">Email</div><a href="mailto:info@ivetavanickova.cz" class="cval">info@ivetavanickova.cz</a></div></div>
+        <div class="citem"><div class="cico">📍</div><div><div class="clabel">Oblast působení</div><span class="cval">Týnec nad Sázavou a okolí do 10 km zdarma</span></div></div>
+        <div class="citem"><div class="cico">🕐</div><div><div class="clabel">Objednávky</div><span class="cval">Po–So 8:00–20:00 (dle dohody i Ne)</span></div></div>
+        <a href="tel:+420606674207" class="ccta">📞 Zavolat a objednat se</a>
       </div>
-      <div class="map-container fade-up">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20812.7!2d14.5938!3d49.8321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b84a6a7c39a7b%3A0x400af0f661310e0!2sT%C3%BDnec%20nad%20S%C3%A1zavou!5e0!3m2!1scs!2scz!4v1" width="100%" height="360" style="border:0;" allowfullscreen loading="lazy"></iframe>
+      <div class="cmap reveal d1">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20812.7!2d14.5938!3d49.8321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b84a6a7c39a7b%3A0x400af0f661310e0!2sT%C3%BDnec%20nad%20S%C3%A1zavou!5e0!3m2!1scs!2scz!4v1" width="100%" height="420" style="border:0;display:block;" allowfullscreen loading="lazy"></iframe>
       </div>
     </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <p>© 2025 <span>Omlazení Dotekem</span> – Iveta Vaníčková &nbsp;·&nbsp; IČO: 70781338 &nbsp;·&nbsp; Týnec nad Sázavou</p>
+  <img src="images/logo.jpg" alt="Omlazení Dotekem" class="flogo">
+  <div class="fbrand">Omlazení Dotekem</div>
+  <div class="fby">by Iveta Vaníčková</div>
+  <div class="fdiv"></div>
+  <p>© 2025 Iveta Vaníčková &nbsp;·&nbsp; IČO: 70781338 &nbsp;·&nbsp; Týnec nad Sázavou &nbsp;·&nbsp; <a href="tel:+420606674207">606 674 207</a></p>
 </footer>
 
-<!-- ============ MODALY ============ -->
-
-<!-- Modal: Lifting -->
+<!-- ══ MODALY ══ -->
 <div class="modal-overlay" id="modal-lifting" onclick="closeModal(event,'lifting')">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModalBtn('lifting')">✕</button>
-    <div class="modal-header svc-lifting"><span class="emoji">✨</span></div>
-    <div class="modal-body">
-      <div class="svc-tag">Omlazení &amp; péče o pleť</div>
-      <h2>Manuální lifting obličeje</h2>
-      <p class="modal-intro">Přirozená alternativa k estetickým zákrokům. Pomocí speciálních manuálních technik a prémiových olejů Saloos pracuji se svaly obličeje, uvolňuji napětí, zpevňuji kontury a stimuluji lymfatický systém – vše bez jehel, bez chemie a bez bolesti.</p>
-      <div class="modal-section">
-        <h4>Co masáž přináší</h4>
-        <ul>
-          <li>Viditelné zpevnění a lifting kontur obličeje</li>
-          <li>Redukce jemných vrásek a nasolabiálních rýh</li>
-          <li>Zářivá, prokrvená a hydratovaná pleť</li>
-          <li>Uvolnění chronického napětí čelistí a čela</li>
-          <li>Detoxikace a odvodnění – pomoc při migréně</li>
-          <li>Hluboký pocit klidu a pohody</li>
-        </ul>
-      </div>
-      <div class="modal-section">
-        <h4>Průběh ošetření</h4>
-        <ul>
-          <li>Krátká konzultace pleti a vašich cílů</li>
-          <li>Příprava pleti a aplikace bio oleje Saloos</li>
-          <li>Manuální lifting – lymfodrenáž, akupresura, modelace</li>
-          <li>Závěrečná relaxační část – uvolnění temene hlavy</li>
-        </ul>
-      </div>
-      <div class="modal-section">
-        <h4>Pro koho je vhodná</h4>
-        <ul>
-          <li>Ženy od 30 let hledající přirozené omlazení</li>
-          <li>Při únavě pleti, mdlém vzhledu, ranním otoku</li>
-          <li>Jako pravidelná prevence procesu stárnutí (doporučeno 1× měsíčně)</li>
-        </ul>
-      </div>
-      <div class="modal-section">
-        <h4>Ceník</h4>
-        <div class="modal-pricing-grid">
-          <div class="modal-price-item"><span class="desc">Základní ošetření</span><span class="dur">60 minut</span><span class="amt">750 Kč</span></div>
-          <div class="modal-price-item"><span class="desc">Prodloužené + zábal dekoltu</span><span class="dur">90 minut</span><span class="amt">1 050 Kč</span></div>
+  <div class="modal"><button class="mclose" onclick="closeModalBtn('lifting')">✕</button>
+    <div class="mhead mh1">✨</div>
+    <div class="mbody">
+      <div class="mtag">Hlavní specialita · Omlazení &amp; péče o pleť</div>
+      <h2><em>Manuální lifting</em> obličeje</h2>
+      <p class="mintro">Přirozená alternativa k estetickým zákrokům. Pomocí speciálních manuálních technik a prémiových olejů Saloos pracuji se svaly obličeje – bez jehel, bez chemie a bez bolesti.</p>
+      <div class="msec"><h4>Co masáž přináší</h4><ul>
+        <li>Viditelné zpevnění a lifting kontur obličeje</li>
+        <li>Redukce jemných vrásek a nasolabiálních rýh</li>
+        <li>Zářivá, prokrvená a hydratovaná pleť</li>
+        <li>Uvolnění chronického napětí čelistí a čela</li>
+        <li>Detoxikace a odvodnění – pomoc při migréně</li>
+        <li>Hluboký pocit klidu a pohody</li>
+      </ul></div>
+      <div class="msec"><h4>Průběh ošetření</h4><ul>
+        <li>Krátká konzultace pleti a vašich cílů</li>
+        <li>Příprava pleti a aplikace bio oleje Saloos</li>
+        <li>Manuální lifting – lymfodrenáž, akupresura, modelace</li>
+        <li>Závěrečná relaxační část – uvolnění temene hlavy</li>
+      </ul></div>
+      <div class="msec"><h4>Ceník</h4>
+        <div class="mpgrid">
+          <div class="mpitem"><div class="d">Základní ošetření</div><div class="t">60 minut</div><div class="a">750 Kč</div></div>
+          <div class="mpitem"><div class="d">Prodloužené + zábal dekoltu</div><div class="t">90 minut</div><div class="a">1 050 Kč</div></div>
         </div>
       </div>
-      <div class="modal-cta"><a href="tel:+420606674207" class="btn-primary">📞 Objednat se</a></div>
+      <div class="mcta"><a href="tel:+420606674207" class="btn-main">📞 Objednat se</a></div>
     </div>
   </div>
 </div>
 
-<!-- Modal: Lávové kameny -->
 <div class="modal-overlay" id="modal-lavove" onclick="closeModal(event,'lavove')">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModalBtn('lavove')">✕</button>
-    <div class="modal-header svc-lavove"><span class="emoji">🪨</span></div>
-    <div class="modal-body">
-      <div class="svc-tag">Královská relaxace</div>
-      <h2>Masáž lávovými kameny</h2>
-      <p class="modal-intro">Zvaná „královnou mezi masážemi". Vulkanické čedičové kameny zahřáté na 45–55 °C kloužou po těle, pronikají teplem hluboko do svalové tkáně a kombinují fyzickou léčbu s energetickým uvolněním. Jeden z nejúčinnějších způsobů, jak zbavit tělo napětí, bolesti a stresu.</p>
-      <div class="modal-section">
-        <h4>Přínosy termální terapie</h4>
-        <ul>
-          <li>Hluboké uvolnění svalových spasmů a ztuhlosti</li>
-          <li>Výrazné zlepšení krevního oběhu a lymfatického toku</li>
-          <li>Zrychlení metabolismu a detoxikace tkání</li>
-          <li>Podpora imunitního systému</li>
-          <li>Zmírnění bolestí hlavy, nespavosti, únavy</li>
-          <li>Antistresový efekt – odbourání kortizolu</li>
-          <li>Pomoc při klimakterických potížích</li>
-        </ul>
-      </div>
-      <div class="modal-section">
-        <h4>Průběh masáže</h4>
-        <ul>
-          <li>Kameny se ohřívají ve vodní lázni na požadovanou teplotu</li>
-          <li>Masáž aromatickým olejem a horkými kameny různých velikostí</li>
-          <li>Kameny se přikládají na energetické body a aktivně masírují partie</li>
-          <li>Závěr v tichu s klesající teplotou – tělo vstřebává teplo</li>
-        </ul>
-      </div>
-      <div class="modal-section">
-        <h4>Ceník dle rozsahu</h4>
-        <div class="modal-pricing-grid">
-          <div class="modal-price-item"><span class="desc">Záda + šíje</span><span class="dur">45 minut</span><span class="amt">750 Kč</span></div>
-          <div class="modal-price-item"><span class="desc">Záda, šíje + paže</span><span class="dur">75 minut</span><span class="amt">950 Kč</span></div>
-          <div class="modal-price-item"><span class="desc">Dolní končetiny + chodidla</span><span class="dur">45 minut</span><span class="amt">750 Kč</span></div>
-          <div class="modal-price-item"><span class="desc">Záda + dolní končetiny</span><span class="dur">75 minut</span><span class="amt">950 Kč</span></div>
-          <div class="modal-price-item"><span class="desc">Relaxační (dekolt, šíje, paže, hlava)</span><span class="dur">60 minut</span><span class="amt">850 Kč</span></div>
-          <div class="modal-price-item"><span class="desc">Celé tělo (bez obličeje)</span><span class="dur">90 minut</span><span class="amt">1 250 Kč</span></div>
-          <div class="modal-price-item"><span class="desc">Celé tělo – premium</span><span class="dur">120 minut</span><span class="amt">1 600 Kč</span></div>
+  <div class="modal"><button class="mclose" onclick="closeModalBtn('lavove')">✕</button>
+    <div class="mhead mh2">🪨</div>
+    <div class="mbody">
+      <div class="mtag">Královská relaxace</div>
+      <h2>Masáž <em>lávovými kameny</em></h2>
+      <p class="mintro">Vulkanické čedičové kameny zahřáté na 45–55 °C pronikají teplem hluboko do svalové tkáně a kombinují fyzickou léčbu s energetickým uvolněním.</p>
+      <div class="msec"><h4>Přínosy</h4><ul>
+        <li>Hluboké uvolnění svalových spasmů a ztuhlosti</li>
+        <li>Výrazné zlepšení krevního oběhu a lymfatického toku</li>
+        <li>Zrychlení metabolismu a detoxikace tkání</li>
+        <li>Podpora imunitního systému</li>
+        <li>Zmírnění bolestí hlavy, nespavosti, únavy</li>
+        <li>Pomoc při klimakterických potížích</li>
+      </ul></div>
+      <div class="msec"><h4>Ceník dle rozsahu</h4>
+        <div class="mpgrid">
+          <div class="mpitem"><div class="d">Záda + šíje</div><div class="t">45 min</div><div class="a">750 Kč</div></div>
+          <div class="mpitem"><div class="d">Záda, šíje + paže</div><div class="t">75 min</div><div class="a">950 Kč</div></div>
+          <div class="mpitem"><div class="d">Dolní končetiny</div><div class="t">45 min</div><div class="a">750 Kč</div></div>
+          <div class="mpitem"><div class="d">Záda + dolní končetiny</div><div class="t">75 min</div><div class="a">950 Kč</div></div>
+          <div class="mpitem"><div class="d">Relaxační (dekolt, šíje, paže, hlava)</div><div class="t">60 min</div><div class="a">850 Kč</div></div>
+          <div class="mpitem"><div class="d">Celé tělo (bez obličeje)</div><div class="t">90 min</div><div class="a">1 250 Kč</div></div>
+          <div class="mpitem"><div class="d">Celé tělo – premium</div><div class="t">120 min</div><div class="a">1 600 Kč</div></div>
         </div>
       </div>
-      <div class="modal-cta"><a href="tel:+420606674207" class="btn-primary">📞 Objednat se</a></div>
+      <div class="mcta"><a href="tel:+420606674207" class="btn-main">📞 Objednat se</a></div>
     </div>
   </div>
 </div>
 
-<!-- Modal: Lymfatická masáž -->
 <div class="modal-overlay" id="modal-lymfa" onclick="closeModal(event,'lymfa')">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModalBtn('lymfa')">✕</button>
-    <div class="modal-header svc-lymfa"><span class="emoji">💧</span></div>
-    <div class="modal-body">
-      <div class="svc-tag">Detox &amp; odlehčení těla</div>
-      <h2>Lymfatická masáž</h2>
-      <p class="modal-intro">Jemná manuální lymfodrenáž aktivuje přirozený odvodňovací systém těla. Pomalými, rytmickými pohyby stimuluji tok lymfy, odvádím přebytečné tekutiny a pomáhám tělu zbavit se odpadních látek. Výsledkem je lehkost, méně otoků a viditelně lepší kvalita pokožky.</p>
-      <div class="modal-section">
-        <h4>Co masáž přináší</h4>
-        <ul>
-          <li>Redukce otoků nohou, kotníků a rukou</li>
-          <li>Viditelné zmírnění celulitidy</li>
-          <li>Hluboká detoxikace a odvodnění organismu</li>
-          <li>Posílení imunitního systému</li>
-          <li>Zlepšení kvality a tónu pokožky</li>
-          <li>Rychlejší hojení po operacích (se souhlasem lékaře)</li>
-          <li>Úleva od pocitu těžkých a unavených nohou</li>
-          <li>Podpora regenerace a celkové pohody</li>
-        </ul>
-      </div>
-      <div class="modal-section">
-        <h4>Pro koho je vhodná</h4>
-        <ul>
-          <li>Ženy s otoky (těhotenství, sedavá práce, stání)</li>
-          <li>Rekonvalescence po chirurgickém zákroku</li>
-          <li>Chronická únava a snížená imunita</li>
-          <li>Jako součást anticelulitidní kúry</li>
-          <li>Při stresu a psychické vyčerpanosti</li>
-        </ul>
-      </div>
-      <div class="modal-section">
-        <h4>Průběh ošetření</h4>
-        <ul>
-          <li>Velmi jemné, pomalé a rytmické pohyby</li>
-          <li>Začíná od lymfatických uzlin (krk, podpaží, třísla)</li>
-          <li>Příjemná relaxační technika, vhodná i pro citlivou pokožku</li>
-          <li>Před i po masáži doporučuji dostatek tekutin</li>
-          <li>Série 5–10 ošetření přináší nejlepší výsledky</li>
-        </ul>
-      </div>
-      <div class="modal-section">
-        <h4>Ceník</h4>
-        <div class="modal-pricing-grid">
-          <div class="modal-price-item"><span class="desc">Částečná (nohy nebo paže)</span><span class="dur">45 minut</span><span class="amt">650 Kč</span></div>
-          <div class="modal-price-item"><span class="desc">Celotělová lymfodrenáž</span><span class="dur">60 minut</span><span class="amt">750 Kč</span></div>
-          <div class="modal-price-item"><span class="desc">Lymfatická + anticel. zábal</span><span class="dur">90 minut</span><span class="amt">1 050 Kč</span></div>
-          <div class="modal-price-item"><span class="desc">Série 5 ošetření</span><span class="dur">výhodné balíčky</span><span class="amt">dle dohody</span></div>
+  <div class="modal"><button class="mclose" onclick="closeModalBtn('lymfa')">✕</button>
+    <div class="mhead mh3">💧</div>
+    <div class="mbody">
+      <div class="mtag">Detox &amp; odlehčení · Nové</div>
+      <h2><em>Lymfatická</em> masáž</h2>
+      <p class="mintro">Jemná manuální lymfodrenáž aktivuje přirozený odvodňovací systém těla. Odvádím přebytečné tekutiny a pomáhám tělu zbavit se odpadních látek.</p>
+      <div class="msec"><h4>Co masáž přináší</h4><ul>
+        <li>Redukce otoků nohou, kotníků a rukou</li>
+        <li>Viditelné zmírnění celulitidy</li>
+        <li>Hluboká detoxikace a odvodnění organismu</li>
+        <li>Posílení imunitního systému</li>
+        <li>Zlepšení kvality a tónu pokožky</li>
+        <li>Rychlejší hojení po operacích (se souhlasem lékaře)</li>
+        <li>Úleva od pocitu těžkých a unavených nohou</li>
+      </ul></div>
+      <div class="msec"><h4>Ceník</h4>
+        <div class="mpgrid">
+          <div class="mpitem"><div class="d">Částečná (nohy nebo paže)</div><div class="t">45 min</div><div class="a">650 Kč</div></div>
+          <div class="mpitem"><div class="d">Celotělová lymfodrenáž</div><div class="t">60 min</div><div class="a">750 Kč</div></div>
+          <div class="mpitem"><div class="d">Lymfatická + anticel. zábal</div><div class="t">90 min</div><div class="a">1 050 Kč</div></div>
+          <div class="mpitem"><div class="d">Série 5 ošetření</div><div class="t">výhodné balíčky</div><div class="a">dle dohody</div></div>
         </div>
       </div>
-      <div class="modal-cta"><a href="tel:+420606674207" class="btn-primary">📞 Objednat se</a></div>
+      <div class="mcta"><a href="tel:+420606674207" class="btn-main">📞 Objednat se</a></div>
     </div>
   </div>
 </div>
 
-<!-- Modal: Anticelulitidní -->
 <div class="modal-overlay" id="modal-anti" onclick="closeModal(event,'anti')">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModalBtn('anti')">✕</button>
-    <div class="modal-header svc-anti"><span class="emoji">🌿</span></div>
-    <div class="modal-body">
-      <div class="svc-tag">Formování postavy</div>
-      <h2>Anticelulitidní masáž + ozonový zábal</h2>
-      <p class="modal-intro">Kombinace intenzivní manuální masáže a ozonového zábalu přináší viditelné výsledky v boji s celulitidou. Tělo detoxikuje, pokožka se zjemňuje a silueta nabývá pevnějších kontur.</p>
-      <div class="modal-section">
-        <h4>Co ošetření přináší</h4>
-        <ul>
-          <li>Redukce celulitidy a viditelné zpevnění pokožky</li>
-          <li>Formování problematických partií (stehna, boky, břicho)</li>
-          <li>Hluboká detoxikace podkožní tkáně díky ozonu</li>
-          <li>Zlepšení elasticity a hydratace pokožky</li>
-          <li>Lymfatická drenáž a odvodnění</li>
-        </ul>
-      </div>
-      <div class="modal-section">
-        <h4>Pro nejlepší výsledky</h4>
-        <ul>
-          <li>Doporučujeme sérii 6–10 ošetření, 1–2× týdně</li>
-          <li>Výsledky viditelné již po 3. ošetření</li>
-          <li>Doplňte pitným režimem a pohybem</li>
-        </ul>
-      </div>
-      <div class="modal-section">
-        <h4>Ceník</h4>
-        <div class="modal-pricing-grid">
-          <div class="modal-price-item"><span class="desc">Anticelulitidní masáž + zábal</span><span class="dur">60–75 minut</span><span class="amt">900 Kč</span></div>
-          <div class="modal-price-item"><span class="desc">Série 5 ošetření</span><span class="dur">výhodné balíčky</span><span class="amt">dle dohody</span></div>
+  <div class="modal"><button class="mclose" onclick="closeModalBtn('anti')">✕</button>
+    <div class="mhead mh4">🌿</div>
+    <div class="mbody">
+      <div class="mtag">Formování postavy</div>
+      <h2>Anticelulitidní masáž <em>+ ozonový zábal</em></h2>
+      <p class="mintro">Kombinace intenzivní manuální masáže a ozonového zábalu přináší viditelné výsledky. Tělo detoxikuje, pokožka se zjemňuje a silueta nabývá pevnějších kontur.</p>
+      <div class="msec"><h4>Co ošetření přináší</h4><ul>
+        <li>Redukce celulitidy a viditelné zpevnění pokožky</li>
+        <li>Formování stehen, boků a břicha</li>
+        <li>Hluboká detoxikace podkožní tkáně díky ozonu</li>
+        <li>Zlepšení elasticity a hydratace pokožky</li>
+        <li>Lymfatická drenáž a odvodnění</li>
+      </ul></div>
+      <div class="msec"><h4>Ceník</h4>
+        <div class="mpgrid">
+          <div class="mpitem"><div class="d">Anticelulitidní masáž + zábal</div><div class="t">60–75 min</div><div class="a">900 Kč</div></div>
+          <div class="mpitem"><div class="d">Série 5 ošetření</div><div class="t">výhodné balíčky</div><div class="a">dle dohody</div></div>
         </div>
       </div>
-      <div class="modal-cta"><a href="tel:+420606674207" class="btn-primary">📞 Objednat se</a></div>
+      <div class="mcta"><a href="tel:+420606674207" class="btn-main">📞 Objednat se</a></div>
     </div>
   </div>
 </div>
 
-<!-- Modal: Sportovní -->
 <div class="modal-overlay" id="modal-sportovni" onclick="closeModal(event,'sportovni')">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModalBtn('sportovni')">✕</button>
-    <div class="modal-header svc-sportovni"><span class="emoji">💪</span></div>
-    <div class="modal-body">
-      <div class="svc-tag">Regenerace &amp; výkon</div>
-      <h2>Sportovní &amp; regenerační masáž</h2>
-      <p class="modal-intro">Masáž cílená na sportovkyně i ženy s fyzicky náročným životním stylem. Odstraňuje svalové přetížení, zkrácení a blokády, urychluje regeneraci po výkonu a pomáhá předcházet zraněním.</p>
-      <div class="modal-section">
-        <h4>Přínosy</h4>
-        <ul>
-          <li>Rychlejší regenerace po sportu nebo fyzické zátěži</li>
-          <li>Uvolnění svalových uzlů a trigger points</li>
-          <li>Prevence svalových zranění a chronické bolesti</li>
-          <li>Zlepšení flexibility a rozsahu pohybu</li>
-          <li>Odbourání kyseliny mléčné</li>
-        </ul>
-      </div>
-      <div class="modal-section">
-        <h4>Vhodná pro</h4>
-        <ul>
-          <li>Rekreační i závodní sportovkyně</li>
-          <li>Ženy se sedavým zaměstnáním a bolestmi páteře</li>
-          <li>Po intenzivní fyzické práci nebo přestěhování</li>
-          <li>Jako pravidelná péče o pohybový aparát</li>
-        </ul>
-      </div>
-      <div class="modal-section">
-        <h4>Ceník</h4>
-        <div class="modal-pricing-grid">
-          <div class="modal-price-item"><span class="desc">Záda, šíje, ramena</span><span class="dur">60 minut</span><span class="amt">700 Kč</span></div>
-          <div class="modal-price-item"><span class="desc">Celotělová regenerační</span><span class="dur">90 minut</span><span class="amt">1 000 Kč</span></div>
+  <div class="modal"><button class="mclose" onclick="closeModalBtn('sportovni')">✕</button>
+    <div class="mhead mh5">💪</div>
+    <div class="mbody">
+      <div class="mtag">Regenerace &amp; výkon</div>
+      <h2>Sportovní &amp; <em>regenerační masáž</em></h2>
+      <p class="mintro">Cílená práce se svalovými skupinami pro sportovkyně i ženy s fyzicky náročným životem. Urychluje regeneraci a pomáhá předcházet zraněním.</p>
+      <div class="msec"><h4>Přínosy</h4><ul>
+        <li>Rychlejší regenerace po sportu nebo fyzické zátěži</li>
+        <li>Uvolnění svalových uzlů a trigger points</li>
+        <li>Prevence zranění a chronické bolesti</li>
+        <li>Zlepšení flexibility a rozsahu pohybu</li>
+        <li>Odbourání kyseliny mléčné</li>
+      </ul></div>
+      <div class="msec"><h4>Ceník</h4>
+        <div class="mpgrid">
+          <div class="mpitem"><div class="d">Záda, šíje, ramena</div><div class="t">60 min</div><div class="a">700 Kč</div></div>
+          <div class="mpitem"><div class="d">Celotělová regenerační</div><div class="t">90 min</div><div class="a">1 000 Kč</div></div>
         </div>
       </div>
-      <div class="modal-cta"><a href="tel:+420606674207" class="btn-primary">📞 Objednat se</a></div>
+      <div class="mcta"><a href="tel:+420606674207" class="btn-main">📞 Objednat se</a></div>
     </div>
   </div>
 </div>
 
-<!-- Modal: Indická -->
 <div class="modal-overlay" id="modal-indic" onclick="closeModal(event,'indic')">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModalBtn('indic')">✕</button>
-    <div class="modal-header svc-indic"><span class="emoji">🕊️</span></div>
-    <div class="modal-body">
-      <div class="svc-tag">Hlava &amp; duševní pohoda</div>
-      <h2>Indická masáž hlavy</h2>
-      <p class="modal-intro">Staroindická technika „Champissage" zaměřená na hlavu, vlasovou pokožku, šíji a ramena. Ideální pro uvolnění stresu, zmírnění migrén a hluboký mentální odpočinek. Provádí se vsedě, oblečeni – žádné svlékání.</p>
-      <div class="modal-section">
-        <h4>Co masáž přináší</h4>
-        <ul>
-          <li>Okamžité uvolnění napětí v hlavě, čele a šíji</li>
-          <li>Úleva od migrén a tenzních bolestí hlavy</li>
-          <li>Zlepšení spánku a soustředění</li>
-          <li>Stimulace vlasové pokožky a vlasových folikulů</li>
-          <li>Hluboký mentální klid a snížení úzkosti</li>
-        </ul>
-      </div>
-      <div class="modal-section">
-        <h4>Průběh</h4>
-        <ul>
-          <li>Masáž vsedě na pohodlné židli, oblečeni</li>
-          <li>Ramena, šíje, zátylek, lebka, vlasová pokožka, tvář</li>
-          <li>Volitelně s kokosovým nebo arganovým olejem</li>
-        </ul>
-      </div>
-      <div class="modal-section">
-        <h4>Ceník</h4>
-        <div class="modal-pricing-grid">
-          <div class="modal-price-item"><span class="desc">Indická masáž hlavy</span><span class="dur">45 minut</span><span class="amt">600 Kč</span></div>
-          <div class="modal-price-item"><span class="desc">Rozšířená (+ záda a dekolt)</span><span class="dur">60 minut</span><span class="amt">800 Kč</span></div>
+  <div class="modal"><button class="mclose" onclick="closeModalBtn('indic')">✕</button>
+    <div class="mhead mh6">🕊️</div>
+    <div class="mbody">
+      <div class="mtag">Hlava &amp; klid mysli</div>
+      <h2><em>Indická masáž</em> hlavy</h2>
+      <p class="mintro">Staroindická technika „Champissage" zaměřená na hlavu, šíji a ramena. Provádí se vsedě, oblečeni – žádné svlékání. Ideální pro uvolnění stresu a migrén.</p>
+      <div class="msec"><h4>Co masáž přináší</h4><ul>
+        <li>Okamžité uvolnění napětí v hlavě a šíji</li>
+        <li>Úleva od migrén a tenzních bolestí hlavy</li>
+        <li>Zlepšení spánku a soustředění</li>
+        <li>Stimulace vlasové pokožky</li>
+        <li>Hluboký mentální klid a snížení úzkosti</li>
+      </ul></div>
+      <div class="msec"><h4>Ceník</h4>
+        <div class="mpgrid">
+          <div class="mpitem"><div class="d">Indická masáž hlavy</div><div class="t">45 min</div><div class="a">600 Kč</div></div>
+          <div class="mpitem"><div class="d">Rozšířená (+ záda a dekolt)</div><div class="t">60 min</div><div class="a">800 Kč</div></div>
         </div>
       </div>
-      <div class="modal-cta"><a href="tel:+420606674207" class="btn-primary">📞 Objednat se</a></div>
+      <div class="mcta"><a href="tel:+420606674207" class="btn-main">📞 Objednat se</a></div>
     </div>
   </div>
 </div>
 
-<!-- Modal: Dárkový poukaz -->
 <div class="modal-overlay" id="modal-darce" onclick="closeModal(event,'darce')">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModalBtn('darce')">✕</button>
-    <div class="modal-header svc-darce"><span class="emoji">🎁</span></div>
-    <div class="modal-body">
-      <div class="svc-tag">Dárek pro blízkého</div>
-      <h2>Dárkový poukaz</h2>
-      <p class="modal-intro">Darujte zážitek, který nezapomene. Dárkové poukazy jsou dostupné na libovolnou hodnotu nebo konkrétní masáž – ideální pro narozeniny, výročí, Vánoce, Den matek nebo jako poděkování.</p>
-      <div class="modal-section">
-        <h4>Jak funguje poukaz</h4>
-        <ul>
-          <li>Zavolejte nebo napište – domlouváme se individuálně</li>
-          <li>Poukaz vydám na konkrétní masáž nebo pevnou částku</li>
-          <li>Platnost poukazu 6 měsíců od vydání</li>
-          <li>Termín si obdarovaná domluví sama dle svých možností</li>
-        </ul>
-      </div>
-      <div class="modal-section">
-        <h4>Tipy na oblíbené dárky</h4>
-        <ul>
-          <li>🪨 Masáž lávovými kameny – celé tělo 90 min (1 250 Kč)</li>
-          <li>✨ Manuální lifting obličeje 60 min (750 Kč)</li>
-          <li>💧 Lymfatická masáž – celé tělo (750 Kč)</li>
-          <li>🕊️ Indická masáž hlavy 45 min (600 Kč)</li>
-          <li>💝 Poukaz na libovolnou hodnotu dle přání</li>
-        </ul>
-      </div>
-      <div class="modal-cta"><a href="tel:+420606674207" class="btn-primary">📞 Domluvit poukaz</a></div>
+  <div class="modal"><button class="mclose" onclick="closeModalBtn('darce')">✕</button>
+    <div class="mhead mh7">🎁</div>
+    <div class="mbody">
+      <div class="mtag">Dárek pro blízkého</div>
+      <h2>Dárkový <em>poukaz</em></h2>
+      <p class="mintro">Darujte zážitek, který nezapomene. Poukazy na libovolnou hodnotu nebo konkrétní masáž – narozeniny, Vánoce, Den matek nebo jen tak.</p>
+      <div class="msec"><h4>Jak funguje poukaz</h4><ul>
+        <li>Zavolejte nebo napište – domlouváme se individuálně</li>
+        <li>Poukaz vydám na konkrétní masáž nebo pevnou částku</li>
+        <li>Platnost poukazu 6 měsíců od vydání</li>
+        <li>Termín si obdarovaná domluví sama dle svých možností</li>
+      </ul></div>
+      <div class="msec"><h4>Tipy na oblíbené dárky</h4><ul>
+        <li>🪨 Masáž lávovými kameny – celé tělo 90 min (1 250 Kč)</li>
+        <li>✨ Manuální lifting obličeje 60 min (750 Kč)</li>
+        <li>💧 Lymfatická masáž – celé tělo 60 min (750 Kč)</li>
+        <li>🕊️ Indická masáž hlavy 45 min (600 Kč)</li>
+      </ul></div>
+      <div class="mcta"><a href="tel:+420606674207" class="btn-main">📞 Domluvit poukaz</a></div>
     </div>
   </div>
 </div>
@@ -896,8 +801,8 @@ footer span{color:var(--rose)}
 <script>
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
-const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')}),{threshold:.1});
-document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in')})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 function openModal(id){document.getElementById('modal-'+id).classList.add('open');document.body.style.overflow='hidden'}
 function closeModalBtn(id){document.getElementById('modal-'+id).classList.remove('open');document.body.style.overflow=''}
 function closeModal(e,id){if(e.target===document.getElementById('modal-'+id))closeModalBtn(id)}
